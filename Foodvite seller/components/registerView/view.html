@@ -1,0 +1,68 @@
+<div data-role="view" data-title="Registration Form" data-layout="main-nonav" data-model="app.registerView" data-show="app.registerView.onShow" data-after-show="app.registerView.afterShow">
+    <div id="registerViewModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+
+                    <p id="paragraph1" data-bind="html: registerViewModel.fields.paragraph1"></p>
+
+                </li>
+                <li>
+
+                    <label>Restaurant Name
+                        <input data-bind="value: registerViewModel.fields.sellerName" type="text">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Address
+                        <input data-bind="value: registerViewModel.fields.sellerAddress" type="text">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Pincode
+                        <input data-bind="value: registerViewModel.fields.sellerPincode" type="text">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Contact Person
+                        <input data-bind="value: registerViewModel.fields.sellerContactPerson" type="text">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Phone
+                        <input data-bind="value: registerViewModel.fields.sellerContact" type="tel">
+                    </label>
+
+                </li>
+                <li>
+
+                    <label>Email
+                        <input data-bind="value: registerViewModel.fields.sellerEmail2" type="email">
+                    </label>
+
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a class="primary" data-role="button" data-bind="events: { click: registerViewModel.submit }">Submit</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_registerViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_registerViewModel -->
+    </div>
+
+    <!-- START_CUSTOM_CODE_registerView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_registerView -->
+</div>

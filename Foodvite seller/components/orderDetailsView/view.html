@@ -1,0 +1,22 @@
+<div data-role="view" data-title="Order Details" data-layout="main-nonav" data-model="app.orderDetailsView" data-show="app.orderDetailsView.onShow" data-after-show="app.orderDetailsView.afterShow">
+    <div id="orderDetailsViewModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: orderDetailsViewModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: orderDetailsViewModel.submit }">Confirm</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_orderDetailsViewModel -->
+        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+        <!-- END_CUSTOM_CODE_orderDetailsViewModel -->
+    </div>
+
+    <!-- START_CUSTOM_CODE_orderDetailsView -->
+    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
+
+    <!-- END_CUSTOM_CODE_orderDetailsView -->
+</div>

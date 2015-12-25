@@ -1,0 +1,49 @@
+.km-flat .km-view .km-navbar {
+    display: none;
+}
+.km-flat .km-view .km-content {
+    background: linear-gradient(#06D6A0, #35A7FF);
+    border: none;
+    color: rgb(250, 250, 250);
+    font-style: normal;
+}
+.km-flat .km-view .km-content .km-text {
+    color: rgb(250, 250, 250);
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+}
+.km-flat .km-view .km-content .km-button .km-text {
+    color: #35a7ff;
+    border: none;
+    font-size: 18px;
+    font-weight: 100;
+}
+.km-flat .km-view .km-content .km-button {
+    background-color: rgb(255, 255, 255);
+}
+.general {
+    margin-top: 5em;
+    margin: 0 3.5em;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+.foodvite-large {
+    font-family: 'Pacifico';
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 100;
+}
+.foodvite-small {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 100;
+}
+a {
+    text-decoration: none;
+}
+
+.foodvite-small-pacifico{
+    font-family: 'Pacifico';
+}

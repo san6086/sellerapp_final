@@ -6,8 +6,171 @@
       "name": "home",
       "components": [],
       "title": "Home View",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "loginView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerEmail",
+              "title": "Email",
+              "inputType": "email"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerPassword",
+              "title": "Password",
+              "inputType": "password"
+            }
+          ],
+          "name": "loginViewModel",
+          "submitButton": "Login",
+          "cancelButton": "Reset"
+        }
+      ],
+      "title": "Login Form",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "registerView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "paragraph1",
+              "title": "Paragraph",
+              "inputType": "paragraph",
+              "value": "Thanks for your interest in partnering with   \nus. \nPlease share your details below."
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerName",
+              "title": "Restaurant Name",
+              "inputType": "text"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerAddress",
+              "title": "Address",
+              "inputType": "text"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerPincode",
+              "title": "Pincode",
+              "inputType": "text"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerContactPerson",
+              "title": "Contact Person",
+              "inputType": "text"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerContact",
+              "title": "Phone",
+              "inputType": "tel"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerEmail2",
+              "title": "Email",
+              "inputType": "email"
+            }
+          ],
+          "name": "registerViewModel",
+          "submitButton": "Submit"
+        }
+      ],
+      "title": "Registration Form",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "resetPasswordView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerOldPassword",
+              "title": "Old Password",
+              "inputType": "password"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerNewPassword",
+              "title": "New Password",
+              "inputType": "password"
+            },
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "sellerConfirmPassword",
+              "title": "Confirm Password",
+              "inputType": "password"
+            }
+          ],
+          "name": "resetPasswordViewModel",
+          "submitButton": "Reset Password",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Reset Password",
+      "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "settingsView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [
+            {
+              "type": "kendo-ui-mobile:field",
+              "name": "ordersSwitch",
+              "title": "Orders On/Off",
+              "inputType": "switch"
+            }
+          ],
+          "name": "settingsViewModel"
+        }
+      ],
+      "title": "Settings",
       "addToNavigation": true,
-      "icon": "home"
+      "icon": "settings"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "ordersView",
+      "components": [],
+      "title": "Orders",
+      "addToNavigation": true,
+      "icon": "cart"
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "orderDetailsView",
+      "components": [
+        {
+          "type": "kendo-ui-mobile:form",
+          "components": [],
+          "name": "orderDetailsViewModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "title": "Order Details",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [],
