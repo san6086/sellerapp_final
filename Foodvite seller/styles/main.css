@@ -201,11 +201,11 @@ border-bottom: 1px none #c9c9c9;
 /* Forms */
 
 ::-webkit-input-placeholder {
-  color: #4d4d4d;
+  color: rgba(38, 84, 124, 0.5);
 }
 
 :-moz-placeholder {
-  color: #4d4d4d;
+  color:#4d4d4d;
 }
 
 ::-moz-placeholder {
@@ -227,36 +227,37 @@ border-bottom: 1px none #c9c9c9;
   padding: .4em 0;
   border-width: 0 0 1px;
   border-color: #c9c9c9; 
-  color : rgba(38, 84, 124, 0.5);
   background-color: #ffffff;
 }
 
-#friendsApp.km-flat .km-list input[type='text']:not(.k-input),
-#friendsApp.km-flat .km-list input[type='password'],
-#friendsApp.km-flat .km-list input[type='email'],
-#friendsApp.km-flat .km-list input[type='date'],
-#friendsApp.km-flat textarea,
-#friendsApp.km-flat select {
+#kendoUiMobileApp.km-flat .km-list input[type='text']:not(.k-input),
+#kendoUiMobileApp.km-flat .km-list input[type='password'],
+#kendoUiMobileApp.km-flat .km-list input[type='email'],
+#kendoUiMobileApp.km-flat .km-list input[type='date'],
+#kendoUiMobileApp.km-flat .km-list input[type='tel'],
+#kendoUiMobileApp.km-flat textarea,
+#kendoUiMobileApp.km-flat select {
   position: static;
   width: 100%;
   height: 30px;
   font-size: 1rem;
 }
 
-#friendsApp.km-flat.km-on-wp .km-list input[type='text']:not(.k-input),
-#friendsApp.km-flat.km-on-wp .km-list input[type='password'],
-#friendsApp.km-flat.km-on-wp .km-list input[type='email'],
-#friendsApp.km-flat.km-on-wp .km-list input[type='date'],
-#friendsApp.km-flat.km-on-wp textarea,
-#friendsApp.km-flat.km-on-wp select {
+#kendoUiMobileApp.km-flat.km-on-wp .km-list input[type='text']:not(.k-input),
+#kendoUiMobileApp.km-flat.km-on-wp .km-list input[type='password'],
+#kendoUiMobileApp.km-flat.km-on-wp .km-list input[type='email'],
+#kendoUiMobileApp.km-flat.km-on-wp .km-list input[type='date'],
+#kendoUiMobileApp.km-flat.km-on-wp input[type='tel'],
+#kendoUiMobileApp.km-flat.km-on-wp textarea,
+#kendoUiMobileApp.km-flat.km-on-wp select {
   padding: 0 .4em;
 }
 
-#friendsApp.km-flat select {
+#kendoUiMobileApp.km-flat select {
   padding: .4em .2em;
 }
 
-#friendsApp.km-flat.km-on-wp select {
+#kendoUiMobileApp.km-flat.km-on-wp select {
   padding: 0 .2em;
 }
 
@@ -267,13 +268,13 @@ border-bottom: 1px none #c9c9c9;
     font-style: normal;
 }
 
-.km-flat .km-view .km-content {
+#kendoUiMobileApp.km-flat .km-view .km-content {
     background-color: rgb(255, 255, 255);
 }
 
 .general {
     margin-top: 145em;
-    margin: 145em 4.5em;
+    margin: 0 5.5em;
     padding-top: 10em;
     text-align: center;
     list-style-type: none;
