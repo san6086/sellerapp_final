@@ -171,13 +171,12 @@ border-bottom: 1px none #c9c9c9;
   color: #ffffff;
 }
 
-/* Navigation Buttons */
-
+/* Navigation Buttons */ 
 #kendoUiMobileApp .nav-button-back {
-    background-image: url(kendo/styles/images/back.png);
+    background-image: url(icons/back1.png);
+    background-size: 127px 119px;
   }
-
-#kendoUiMobileApp .hide-textR {
+#kendoUiMobileApp .hide-text {
   text-indent: -999px;
   overflow: hidden;
 }
@@ -261,23 +260,29 @@ border-bottom: 1px none #c9c9c9;
   padding: 0 .2em;
 }
 
-.foodvite{
+#kendoUiMobileApp.km-flat .km-view .km-content
+{
+    background : rgb(255, 255, 255);
+}
+
+#kendoUiMobileApp.foodvite{
     background: linear-gradient(#06D6A0, #35A7FF);
     border: none;
     color: rgb(250, 250, 250);
     font-style: normal;
 }
 
-#kendoUiMobileApp.km-flat .km-view .km-content {
-    background-color: rgb(255, 255, 255);
+#homepage div {
+    height: 100vh;
 }
 
 .general {
-    margin-top: 145em;
-    margin: 0 5.5em;
+    margin-top: 20px;
+    margin: 0 4em;
     padding-top: 10em;
     text-align: center;
     list-style-type: none;
+    padding-top : 0.5em;
 }
 
 .foodvite-large {
@@ -286,4 +291,12 @@ border-bottom: 1px none #c9c9c9;
     color: #35a7ff;
     font-size: 30px;
     font-weight: 100;
+}
+
+.km-switch-container {
+    background-color: rgb(53, 167, 255);
+}
+
+.km-switch-container .km-switch-handle {
+    background-color: #ffffff;
 }
