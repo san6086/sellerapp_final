@@ -1,27 +1,26 @@
 <div data-role="view" data-title="Settings" data-layout="main" data-model="app.settingsView" data-show="app.settingsView.onShow" data-after-show="app.settingsView.afterShow">
+    <div data-role="header">
+        <div data-role="navbar">
+            Log in
+            <a class="nav-button nav-button-back hide-text" data-align="left" data-role="backbutton">Back</a>
+        </div>
+    </div>
     <div id="settingsViewModel" class="form-view">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
-
                     <label>Orders On/Off
                         <input data-bind="value: settingsViewModel.fields.ordersSwitch" data-role="switch">
                     </label>
-
                 </li>
             </ul>
-
             <div class="button-group">
             </div>
         </form>
         <!-- START_CUSTOM_CODE_settingsViewModel -->
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
         <!-- END_CUSTOM_CODE_settingsViewModel -->
     </div>
-
-    <!-- START_CUSTOM_CODE_settingsView -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-
-    <!-- END_CUSTOM_CODE_settingsView -->
+    <a class="nav-button nav-button-icon nav-button-back hide-text" data-align="left" data-role="backbutton">Back</a>
+    <a class="nav-button" data-align="right" data-role="button" href="components/resetPasswordView/view.html">changepassword</a>
 </div>

@@ -17,8 +17,7 @@ app.registerView = kendo.observable({
             sellerContactPerson: '',
             sellerPincode: '',
             sellerAddress: '',
-            sellerName: '',
-            paragraph1: 'Thanks for your interest in partnering with   <br />us. <br />Please share your details below.',
+            sellerName: ''
         },
         submit: function() {}
     });

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     <script src="cordova.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
@@ -14,6 +14,8 @@
 </head>
 
 <body id="kendoUiMobileApp">
+    <script src="components/myaccountView/index.js"></script>
+    <script src="components/getstartedView/index.js"></script>
     <script src="components/orderDetailsView/index.js"></script>
     <script src="components/ordersView/index.js"></script>
     <script src="components/settingsView/index.js"></script>
@@ -31,10 +33,6 @@
         <!-- application views will be rendered here -->
 
         <footer data-role="footer">
-            <div data-role="tabstrip" id="navigation-container">
-                <a href="components/settingsView/view.html" data-icon="settings">Settings</a>
-                <a href="components/ordersView/view.html" data-icon="cart">Orders</a>
-            </div>
         </footer>
     </div>
 
