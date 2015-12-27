@@ -174,8 +174,8 @@ border-bottom: 1px none #c9c9c9;
 /* Navigation Buttons */ 
 #kendoUiMobileApp .nav-button-back {
     background-image: url(icons/back1.png);
-    background-size: 127px 119px;
   }
+
 #kendoUiMobileApp .hide-text {
   text-indent: -999px;
   overflow: hidden;
@@ -189,9 +189,9 @@ border-bottom: 1px none #c9c9c9;
 
 #kendoUiMobileApp .nav-button-icon {
   display: inline-block;
-  width: 80px;
-  height: 80px;
-  margin: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0.6em;
   padding: 0;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -293,10 +293,14 @@ border-bottom: 1px none #c9c9c9;
     font-weight: 100;
 }
 
-.km-switch-container {
-    background-color: rgb(53, 167, 255);
+.km-switch-container .km-switch-handle .km-switch-label-on {
+    background-color: #06D6A0;
+    color: #ffffff;
+    border: none;
 }
 
-.km-switch-container .km-switch-handle {
-    background-color: #ffffff;
+.km-switch-container .km-switch-handle .km-switch-label-off {
+    background-color: #ef476f;
+    color: #ffffff;
 }
+
