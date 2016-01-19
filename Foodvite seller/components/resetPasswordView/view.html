@@ -1,11 +1,12 @@
-<div data-role="view" data-title="Reset Password" data-layout="main-nonav" data-model="app.resetPasswordView" data-show="app.resetPasswordView.onShow" data-after-show="app.resetPasswordView.afterShow">
+<div data-role="view" id="resetpasswordView"data-title="Reset Password" data-layout="main" data-model="app.resetPasswordView" data-show="app.resetPasswordView.onShow" data-after-show="app.resetPasswordView.afterShow">
     <div data-role="header">
         <div data-role="navbar">
             Change Password
-            <a class="nav-button nav-button-back hide-text" data-align="left" data-role="backbutton">Back</a>
+            <img class="nav-button nav-button-icon nav-button-back" data-align="left" data-role="backbutton" src="icons/back.png" data-bind="events: { click: resetPasswordViewModel.cancel }"/>
+            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: resetPasswordViewModel.submit }">Done</a>
         </div>
     </div>
-    <br><span class="general foodvite-large">foodvite</span>
+    <br><div class="alignment pacifico">foodvite</div>
     <div id="resetPasswordViewModel" class="form-view">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
@@ -25,12 +26,9 @@
                     </label>
                 </li>
             </ul>
-            <div class="button-group">
-                <a data-role="button" data-bind="events: { click: resetPasswordViewModel.cancel }">Cancel</a>
-                <a class="primary" data-role="button" data-bind="events: { click: resetPasswordViewModel.submit }">Reset Password</a>
-            </div>
+            
         </form>
-        <a class="nav-button nav-button-icon nav-button-back hide-text" data-align="left" data-role="backbutton">Back</a>
+        
         <!-- START_CUSTOM_CODE_resetPasswordViewModel -->
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
         <!-- END_CUSTOM_CODE_resetPasswordViewModel -->

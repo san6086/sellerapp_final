@@ -2,14 +2,12 @@
     float: left;
     margin-right: 15px;
 }
-
 #kendoUiMobileApp .block {
     display: block;
     margin: 1em;
     padding: 1em;
     text-align: center;
 }
-
 #kendoUiMobileApp .button-group,
 #kendoUiMobileApp .icon-group {
     width: 100%;
@@ -17,218 +15,182 @@
     border-collapse: separate;
     border-spacing: 1em;
 }
-
 #kendoUiMobileApp .button-group {
     table-layout: fixed;
 }
-
 #kendoUiMobileApp .button-group .km-button {
     display: table-cell;
     padding: 0.3em 0.8em;
     margin: 1em 0;
 }
-
 #kendoUiMobileApp .button-group.button-group-vertical .km-button {
     display: block;
 }
-
 #kendoUiMobileApp.km-flat .button-group .km-button.primary {
     color: #fff;
-    background-color:  #35a7ff;
+    background-color: #35a7ff;
 }
-
 #kendoUiMobileApp.km-ios7 .button-group .km-button.primary {
     color: #fff;
     background-color: #007aff;
 }
-
 #kendoUiMobileApp.km-android .button-group .km-button.primary {
     color: #fff;
     background-color: #33b5e5;
 }
-
 #kendoUiMobileApp .group-separator {
     border: none;
     background: transparent;
 }
-
 #kendoUiMobileApp .group-separator-header {
     margin: 1em 0;
 }
-
 #kendoUiMobileApp .app-icon {
     text-align: center;
     margin: 3em 0;
 }
-
 #kendoUiMobileApp .view-title {
     text-align: center;
     font-weight: normal;
 }
-
 #kendoUiMobileApp .km-drawer-button:after,
 #kendoUiMobileApp .km-drawer-button:before {
     content: '\e077';
 }
-
 #kendoUiMobileApp.km-flat .km-drawer .km-content {
     background-color: #ffffff;
 }
-
 #kendoUiMobileApp form .form-content li p {
     margin: 0;
 }
-
 #kendoUiMobileApp .icon-group .app-icon,
 #kendoUiMobileApp .icon-group .app-details {
     display: table-cell;
     vertical-align: top;
 }
-
 #kendoUiMobileApp .icon-group .app-icon {
     margin: 0;
     width: 5em;
     overflow: hidden;
     text-align: left;
 }
-
 #kendoUiMobileApp .icon-group .app-icon img {
     display: block;
     max-width: 5em;
     height: auto;
 }
-
 #kendoUiMobileApp .icon-group .app-details h2,
 #kendoUiMobileApp .icon-group .app-details h4 {
     font-weight: normal;
     margin: 0;
 }
-
 #kendoUiMobileApp .icon-group .app-details h4 {
     color: #828282;
     margin-top: 0.5em;
 }
-
 #kendoUiMobileApp #navigation-container.km-tabstrip .km-button {
     vertical-align: top;
 }
-
 #kendoUiMobileApp #navigation-container.km-tabstrip .km-button .km-text {
     max-width: 100%;
     word-wrap: break-word;
 }
-
 #kendoUiMobileApp #navigation-container .active {
     background: #35A7FF;
     color: #fff;
 }
-
 #kendoUiMobileApp #navigation-container .active:after {
     color: #fff;
 }
-
 #kendoUiMobileApp.km-nova #navigation-container.km-tabstrip .km-button {
     vertical-align: middle;
 }
-
 #kendoUiMobileApp.km-nova p {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-
 #kendoUiMobileApp.km-nova span.km-switch.km-switc {
     color: #ff4350;
 }
-
 #kendoUiMobileApp.km-nova span.km-switch.km-switch-on input[type=checkbox]:checked + span + span {
     border-color: #ff4350;
     background-color: #ff4350;
 }
-
 /* App - header*/
 
 #kendoUiMobileApp.km-flat.km-on-ios.km-black-translucent-status-bar .km-header {
-  min-height: 20px;
-  background-color: #35a7ff;
+    min-height: 20px;
+    background-color: #35a7ff;
 }
-
 #kendoUiMobileApp.km-flat.km-on-ios.km-black-translucent-status-bar .km-header .km-navbar {
-  margin-top: 20px;
-  padding-top: .5em;
+    margin-top: 20px;
+    padding-top: .5em;
 }
-
 #kendoUiMobileApp.km-flat .km-header .km-navbar {
-  min-height: 3.15em;
+    min-height: 3.15em;
 }
-
 #kendoUiMobileApp.km-flat .km-header .km-navbar {
-border-bottom: 1px none #c9c9c9;
+    border-bottom: 1px none #c9c9c9;
 }
-
 #kendoUiMobileApp.km-flat .km-header .km-view-title {
-  font-size: 1.3em;
-  background-color: #35a7ff;
-  color: #ffffff;
+    font-size: 1.3em;
+    background-color: #35a7ff;
+    color: #ffffff;
 }
+/* Navigation Buttons */
 
-/* Navigation Buttons */ 
 #kendoUiMobileApp .nav-button-back {
     background-image: url(icons/back1.png);
-  }
-
+}
 #kendoUiMobileApp .hide-text {
-  text-indent: -999px;
-  overflow: hidden;
+    text-indent: -999px;
+    overflow: hidden;
 }
-
 #kendoUiMobileApp .nav-button {
-  border: 0 none;
-  background-color: transparent;
-  color : #000000;
+    border: 0 none;
+    background-color: transparent;
+    color: #000000;
 }
-
+#kendoUiMobileApp .nav-button-white {
+    border: 0 none;
+    background-color: transparent;
+    color: #ffffff;
+}
 #kendoUiMobileApp .nav-button-icon {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0.6em;
-  padding: 0;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0.6em;
+    padding: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
-
 /* Forms */
 
 ::-webkit-input-placeholder {
-  color: rgba(38, 84, 124, 0.5);
+    color: #C5C5C5;
 }
-
 :-moz-placeholder {
-  color:#4d4d4d;
+    color: #4d4d4d;
 }
-
 ::-moz-placeholder {
-  color: #4d4d4d;
+    color: #4d4d4d;
 }
-
 :-ms-input-placeholder {
-  color: #4d4d4d;
+    color: #4d4d4d;
 }
-
 #kendoUiMobileApp.km-flat form .km-list > li,
 #kendoUiMobileApp .btn {
-  border-radius: 0;
-  background: #ffffff;
+    border-radius: 0;
+    background: #ffffff;
 }
-
 #kendoUiMobileApp.km-flat form .km-list > li {
-  margin: 0 0 1em;
-  padding: .4em 0;
-  border-width: 0 0 1px;
-  border-color: #c9c9c9; 
-  background-color: #ffffff;
+    margin: 0 0 1em;
+    padding: .4em 0;
+    border-width: 0 0 1px;
+    border-color: #c9c9c9;
+    background-color: #ffffff;
 }
-
 #kendoUiMobileApp.km-flat .km-list input[type='text']:not(.k-input),
 #kendoUiMobileApp.km-flat .km-list input[type='password'],
 #kendoUiMobileApp.km-flat .km-list input[type='email'],
@@ -236,12 +198,12 @@ border-bottom: 1px none #c9c9c9;
 #kendoUiMobileApp.km-flat .km-list input[type='tel'],
 #kendoUiMobileApp.km-flat textarea,
 #kendoUiMobileApp.km-flat select {
-  position: static;
-  width: 100%;
-  height: 30px;
-  font-size: 1rem;
+    position: static;
+    width: 100%;
+    height: 30px;
+    font-size: 1rem;
+    color: #000000;
 }
-
 #kendoUiMobileApp.km-flat.km-on-wp .km-list input[type='text']:not(.k-input),
 #kendoUiMobileApp.km-flat.km-on-wp .km-list input[type='password'],
 #kendoUiMobileApp.km-flat.km-on-wp .km-list input[type='email'],
@@ -249,58 +211,136 @@ border-bottom: 1px none #c9c9c9;
 #kendoUiMobileApp.km-flat.km-on-wp input[type='tel'],
 #kendoUiMobileApp.km-flat.km-on-wp textarea,
 #kendoUiMobileApp.km-flat.km-on-wp select {
-  padding: 0 .4em;
+    padding: 0 .4em;
 }
-
 #kendoUiMobileApp.km-flat select {
-  padding: .4em .2em;
+    padding: .4em .2em;
 }
-
 #kendoUiMobileApp.km-flat.km-on-wp select {
-  padding: 0 .2em;
+    padding: 0 .2em;
 }
-
-#kendoUiMobileApp.km-flat .km-view .km-content
-{
-    background : rgb(255, 255, 255);
+#kendoUiMobileApp.km-flat .km-view .km-content {
+    background: rgb(255, 255, 255);
 }
-
-#kendoUiMobileApp.foodvite{
+.foodvite {
     background: linear-gradient(#06D6A0, #35A7FF);
     border: none;
     color: rgb(250, 250, 250);
     font-style: normal;
 }
-
-#homepage div {
-    height: 100vh;
-}
-
-.general {
-    margin-top: 20px;
-    margin: 0 4em;
-    padding-top: 10em;
-    text-align: center;
-    list-style-type: none;
-    padding-top : 0.5em;
-}
-
 .foodvite-large {
     margin-top: 145em;
+    margin: 0 2em;
     font-family: 'Pacifico';
     color: #35a7ff;
     font-size: 30px;
     font-weight: 100;
 }
-
+.foodvite-small {
+    font-family: 'Pacifico';
+}
+#kendoUiMobileApp.roboto {
+    font-family: 'Roboto';
+}
+.foodvite-blue {
+    color: #35A7FF;
+}
 .km-switch-container .km-switch-handle .km-switch-label-on {
     background-color: #06D6A0;
     color: #ffffff;
     border: none;
 }
-
 .km-switch-container .km-switch-handle .km-switch-label-off {
     background-color: #ef476f;
     color: #ffffff;
 }
+/* Home Page */
 
+#kendoUiMobileApp #homeView .km-content {
+    background: linear-gradient(#06D6A0, #35A7FF);
+}
+#kendoUiMobileApp #homeView .km-button {
+    color: #35a7ff;
+    background-color: #ffffff;
+}
+#kendoUiMobileApp #homeView a {
+    color: #000000;
+    text-decoration: none;
+}
+#kendoUiMobileApp #homeView .nav-button {
+    color: #000000;
+    background-color: transparent;
+    border-radius: 10px;
+}
+#kendoUiMobileApp #homeView .general {
+    text-align: center;
+    list-style-type: none;
+    color: #ffffff;
+}
+#kendoUiMobileApp #homeView li {
+    border-width: 0 0 1px;
+}
+#kendoUiMobileApp #homeView .alignment {
+    margin-top: 25% auto;
+    margin-left: 25% auto;
+    margin-bottom: 25% auto;
+    margin-right: 25% auto;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 100;
+}
+#kendoUiMobileApp #homeView .pacifico {
+    font-family: 'Pacifico';
+    font-size: 50px;
+    font-weight: 200;
+}
+#kendoUiMobileApp #homeView .pacifico-small {
+    font-family: 'Pacifico';
+}
+/* Login View */
+
+#kendoUiMobileApp #loginView .alignment {
+    margin-top: 25% auto;
+    margin-left: 25% auto;
+    margin-bottom: 25% auto;
+    margin-right: 25% auto;
+    text-align: center;
+    color: #35a7ff;
+    font-size: 20px;
+    font-weight: 200;
+}
+#kendoUiMobileApp #loginView .pacifico {
+    font-family: 'Pacifico';
+    font-size: 50px;
+}
+
+/* Register View */
+#kendoUiMobileApp #registerView .alignment {
+    margin-top: 25% auto;
+    margin-left: 25% auto;
+    margin-bottom: 25% auto;
+    margin-right: 25% auto;
+    text-align: center;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+/* Change Password View */
+
+#kendoUiMobileApp #resetpasswordView .alignment {
+    margin-top: 25% auto;
+    margin-left: 25% auto;
+    margin-bottom: 25% auto;
+    margin-right: 25% auto;
+    text-align: center;
+    color: #35a7ff;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+#kendoUiMobileApp #resetpasswordView .pacifico {
+    font-family: 'Pacifico';
+    font-size: 50px;
+}

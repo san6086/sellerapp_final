@@ -12,8 +12,20 @@ app.orderDetailsView = kendo.observable({
 (function(parent) {
     var orderDetailsViewModel = kendo.observable({
         fields: {},
-        submit: function() {},
-        cancel: function() {}
+        submit: function() {$.ajax({
+                url: "http://sit.foodvite.co:81/FVS/FV",
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                data: {data: JSON.stringify({ "serviceName": "SignUp"})},
+                dataType: "json"
+            });},
+        cancel: function() {$.ajax({
+                url: "http://sit.foodvite.co:81/FVS/FV",
+                type: "POST",
+                contentType: "application/x-www-form-urlencoded",
+                data: {data: JSON.stringify({ "serviceName": "SignUp"})},
+                dataType: "json"
+            });}
     });
 
     parent.set('orderDetailsViewModel', orderDetailsViewModel);

@@ -185,6 +185,13 @@
       "components": [],
       "title": "Account View",
       "addToNavigation": false
+    },
+    {
+      "type": "kendo-ui-mobile:view",
+      "name": "registersuccessView",
+      "components": [],
+      "title": "RegisterSuccess View",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [],

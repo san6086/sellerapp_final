@@ -1,29 +1,27 @@
-<div data-role="view" data-title="Login Form" data-layout="main-nonav" data-model="app.loginView" data-show="app.loginView.onShow" data-after-show="app.loginView.afterShow">
+<div data-role="view" id="loginView" data-title="Login Form" data-layout="main-nonav" data-model="app.loginView" data-show="app.loginView.onShow" data-after-show="app.loginView.afterShow">
     <div data-role="header">
-        <div data-role="navbar">
+        <div data-role="navbar" class="roboto">
             Log in
-            <a class="nav-button nav-button-back hide-text" data-align="left" data-role="backbutton">Back</a>
+            <img class="nav-button nav-button-icon nav-button-back" data-bind="events: { click: loginViewModel.cancel }" data-align="left" data-role="backbutton" src="icons/back.png" />
+            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: loginViewModel.submit }">Done</a>
         </div>
     </div>
     <div id="loginViewModel" class="form-view">
-       <br> <span class="general foodvite-large">foodvite</span>
         <form>
+            <br>
+            <br><div class="alignment pacifico">foodvite</div>
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
-                    <label>Email
-                        <input data-bind="value: loginViewModel.fields.sellerEmail" type="email">
+                    <label>
+                        <input data-bind="value: loginViewModel.fields.sellerEmail" type="email" placeholder="Email" required validationMessage="Email is required!">
                     </label>
                 </li>
                 <li>
-                    <label>Password
-                        <input data-bind="value: loginViewModel.fields.sellerPassword" type="password">
+                    <label>
+                        <input data-bind="value: loginViewModel.fields.sellerPassword" type="password" placeholder="Password" required data-required-msg="You must confirm your password">
                     </label>
                 </li>
             </ul>
-            <div class="button-group">
-                <a data-role="button" data-bind="events: { click: loginViewModel.cancel }">Reset</a>
-                <a class="primary" data-role="button" data-bind="events: { click: loginViewModel.submit }">Login</a>
-            </div>
         </form>
         <!-- START_CUSTOM_CODE_loginViewModel -->
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
@@ -32,5 +30,4 @@
     <!-- START_CUSTOM_CODE_loginView -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <!-- END_CUSTOM_CODE_loginView -->
-    <a class="nav-button" data-align="right" data-role="button" href="components/ordersView/view.html">orders</a>
 </div>
