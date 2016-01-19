@@ -5,20 +5,23 @@
             <img class="nav-button nav-button-icon nav-button-back" data-align="left" data-role="backbutton" src="icons/back.png" />
         </div>
     </div>
-    <div id="orderDetailsViewModel" class="form-view">
-        <form>
-            <ul class="form-content" data-role="listview" data-style="inset">
-            </ul>
+    <div style="position: relative; height: 100px;">
+        <p>
+            will collect from
+        </p>
+        <div style="position: fixed; height: 10px; border: solid; bottom: 0; right: 0;  left: 0; ">
             <div class="button-group">
                 <a data-role="button" data-bind="events: { click: orderDetailsViewModel.cancel }">Cancel</a>
                 <a class="primary" data-role="button" data-bind="events: { click: orderDetailsViewModel.submit }">Confirm</a>
             </div>
-        </form>
-        <!-- START_CUSTOM_CODE_orderDetailsViewModel -->
-        <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-        <!-- END_CUSTOM_CODE_orderDetailsViewModel -->
+        </div>
     </div>
-    <a class="nav-button nav-button-icon nav-button-back hide-text" data-align="left" data-role="backbutton">Back</a>
+    <div id="orderDetailsViewModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+            </ul>
+        </form>
+    </div>
     <!-- START_CUSTOM_CODE_orderDetailsView -->
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <!-- END_CUSTOM_CODE_orderDetailsView -->
