@@ -1,14 +1,15 @@
-<div data-role="view" data-title="Orders" data-layout="main" data-model="app.ordersView" data-show="app.ordersView.onShow" data-after-show="app.ordersView.afterShow">
- <div data-role="header">
+<div data-role="view" id="ordersView" data-title="Orders" data-layout="main" data-model="app.ordersView" data-show="app.ordersView.onShow" data-after-show="app.ordersView.afterShow">
+    <div data-role="header">
         <div data-role="navbar">
             Orders
-            <img src="icons/settings.png" class="nav-button nav-button-back nav-button-icon" data-align="left" data-role="button" href="components/settingsView/view.html"/>
-            <input type="checkbox" data-role="switch" data-enable="true" data-align="right" data-off-label="No" data-on-label="Yes"/>
+            <img src="icons/settings.png" class="nav-button nav-button-back nav-button-icon" data-align="left" data-role="button" href="components/settingsView/view.html" />
+            <input type="checkbox" data-role="switch" data-enable="true" data-align="right" data-off-label="off" data-on-label="on" />
         </div>
     </div>
-    
-    
-
-     <a class="nav-button" data-align="right" data-role="button" href="components/orderDetailsView/view.html">orderdetails</a>
-  
+    <p id="no-orders" hidden="hidden" class="no-items-msg">
+        <b>You have no orders yet.</b>
+    </p>
+    <a class="nav-button" data-align="right" data-role="button" href="components/orderDetailsView/view.html">orderdetails</a>
+    <div data-role="footer">
+    </div>
 </div>

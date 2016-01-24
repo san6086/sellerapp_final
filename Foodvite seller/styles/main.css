@@ -137,6 +137,12 @@
     background-color: #35a7ff;
     color: #ffffff;
 }
+#kendoUiMobileApp.km-flat .km-footer {
+    background-color: #ffffff;
+    border-width: 0 0 1px;
+    border-color: #c9c9c9;
+    padding-top: .5em;
+}
 /* Navigation Buttons */
 
 #kendoUiMobileApp .nav-button-back {
@@ -314,8 +320,8 @@
     font-family: 'Pacifico';
     font-size: 50px;
 }
-
 /* Register View */
+
 #kendoUiMobileApp #registerView .alignment {
     margin-top: 25% auto;
     margin-left: 25% auto;
@@ -326,7 +332,6 @@
     font-size: 15px;
     font-weight: 100;
 }
-
 /* Change Password View */
 
 #kendoUiMobileApp #resetpasswordView .alignment {
@@ -336,11 +341,30 @@
     margin-right: 25% auto;
     text-align: center;
     color: #35a7ff;
-    font-size: 15px;
+    font-size: 8px;
     font-weight: 100;
 }
-
 #kendoUiMobileApp #resetpasswordView .pacifico {
     font-family: 'Pacifico';
     font-size: 50px;
+}
+
+/* Orders View */
+#kendoUiMobileApp #ordersView .km-footer {
+    background-color: #35a7ff;
+    border-width: 0 0 1px;
+    border-color: #c9c9c9;
+    padding-top: .5em;
+    min-height: 3.15em;
+}
+
+#kendoUiMobileApp #ordersView .user-avatar {
+  float: left;
+  width: 50px;
+}
+
+#kendoUiMobileApp #ordersView .user-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
 }
