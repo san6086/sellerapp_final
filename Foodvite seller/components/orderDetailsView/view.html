@@ -5,16 +5,67 @@
             <img class="nav-button nav-button-icon nav-button-back" data-align="left" data-role="backbutton" src="icons/back.png" />
         </div>
     </div>
-    <div style="position: relative; height: 30%;" class="form-view">
-        <p>
-            will collect from
-        </p>
-    </div>
-    <div id="orderDetailsViewModel" class="form-view">
+    <div id="orderdetailsView" class="form-view">
         <form>
-            <ul class="form-content" data-role="listview" data-style="inset"> sdfhskdhfs
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <div style="position: relative; height: 50%;" class="form-view" border-style="solid" border-width="thin" border-color="#000000">
+                    <li>
+                        <table>
+                            <tr>
+                                <td>
+                                    <img class="user-avatar" data-align="left" src="icons/avatar.png" />
+                                </td>
+                                <td>
+                                    <p data-align="centre" color="#35a7ff">
+                                        Santhosh will collect for Kishan at 12:00 PM
+                                    </p>
+                                    <table>
+                                        <tr>
+                                            <td><img class="call-user" data-align="centre" src="icons/call-customer.png" />
+                                            </td>
+                                            <td>
+                                                <div class="button-group" data-align="centre">
+                                                    <a data-role="button" data-align="centre">santhosh narayanan</a>
+                                                    <a data-role="button" data-align="centre">kishan</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                    <li>
+                        <p data-align="centre" color="#35a7ff">
+                            03 Jan 16 | Order ID: 237428734t
+                        </p>
+                    </li>
+                </div>
             </ul>
         </form>
+    </div>
+    <div class="summary" data-role="footer" data-position="fixed" data-align="centre">
+        <table>
+            <tr>
+                <td>Total Items:</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td>$30.00</td>
+            </tr>
+            <tr>
+                <td>Total price includes:</td>
+            </tr>
+            <tr>
+                <td>Sub-total</td>
+                <td>$29.00</td>
+            </tr>
+            <tr>
+                <td>GST(7.00%)</td>
+                <td>$1.00</td>
+            </tr>
+        </table>
     </div>
     <div data-role="footer" data-position="fixed">
         <div class="button-group">
