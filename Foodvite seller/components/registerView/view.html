@@ -1,50 +1,53 @@
-<div data-role="view" id="registerView" data-title="Registration Form" data-layout="main" data-model="app.registerView" data-show="app.registerView.onShow" data-after-show="app.registerView.afterShow">
+<div data-role="view" id="registerView" data-title="Registration Form" data-layout="main" data-model="app.registerView" data-init="app.registerView.init" data-show="app.registerView.onShow" data-after-show="app.registerView.afterShow">
     <div data-role="header">
         <div data-role="navbar">
             <span class="foodvite-small">foodvite</span>
-            <img class="nav-button nav-button-icon nav-button-back hide-text" data-align="left" data-role="backbutton" src="icons/back.png" />
+            <img id="back-button" class="nav-button nav-button-icon nav-button-back hide-text" data-align="left" data-role="backbutton" src="icons/back.png" />
         </div>
     </div>
     <div id="registerViewModel" class="form-view">
-        <form>
+        <form id="registerForm">
             <br>
             <div class="alignment">Thanks for your interest in partnering with us.
                 <div> Please share your details below. </div>
+                <br>
+                <span id="error-message-1" class="error-message">Error Occurred, Registration Unsuccessful!</span>
+                <span id="error-message-2" class="error-message">Invalid email/password.</span>
             </div>
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
                     <label>
-                        <input data-bind="value: registerViewModel.fields.sellerName" type="text" placeholder="Restaurant Name">
+                        <input id="sellerName" data-bind="value: registerViewModel.fields.sellerName" type="text" placeholder="Restaurant Name" maxlength="90" required="required">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input data-bind="value: registerViewModel.fields.sellerAddress" type="text" placeholder="Address">
+                        <input id="sellerAddress" data-bind="value: registerViewModel.fields.sellerAddress" type="text" placeholder="Address" maxlength="90" required="required">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input data-bind="value: registerViewModel.fields.sellerPincode" type="text" placeholder="Pincode">
+                        <input id="sellerPincode" data-bind="value: registerViewModel.fields.sellerPincode" type="tel" placeholder="Pincode" maxlength="6" required="required">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input data-bind="value: registerViewModel.fields.sellerContactPerson" type="text" placeholder="Contact Person">
+                        <input id="sellerContactPerson" data-bind="value: registerViewModel.fields.sellerContactPerson" type="text" placeholder="Contact Person" maxlength="90" required="required">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input data-bind="value: registerViewModel.fields.sellerContact" type="tel" placeholder="Phone">
+                        <input id="sellerContact" data-bind="value: registerViewModel.fields.sellerContact" type="tel" placeholder="Phone" maxlength="8" required="required">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input data-bind="value: registerViewModel.fields.sellerEmail2" type="email" placeholder="Email">
+                        <input id="sellerEmail" data-bind="value: registerViewModel.fields.sellerEmail2" type="email" placeholder="Email" maxlength="90" required="required">
                     </label>
                 </li>
             </ul>
-            <div class="button-group">
-                <a class="primary" data-role="button" data-bind="events: { click: registerViewModel.submit }">Submit</a>
+            <div class="alignment">
+                <a id="register-submit" class="submit-button disabled" data-align="center" data-role="button" data-bind="events: { click: registerViewModel.submit }">Submit</a>
             </div>
         </form>
         <!-- START_CUSTOM_CODE_registerViewModel -->

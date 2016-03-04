@@ -2,7 +2,23 @@
 
 app.loginView = kendo.observable({
     onShow: function () {},
-    afterShow: function () {}
+    afterShow: function () {
+        $('#login-error-message-1').hide();
+        $('#login-error-message-2').hide();
+        $('#loginSubmit').addClass('disabled');
+        var validator = $('#loginForm').kendoValidator({
+            validateOnBlur: false
+        }).data('kendoValidator');
+        var formFields = $('#loginForm').find('input');
+        formFields.on('keyup keypress blur change input', function () {
+            validator.hideMessages();
+            if (validator.validate()) {
+                $('#loginSubmit').removeClass('disabled');
+            } else {
+                $('#loginSubmit').addClass('disabled');
+            }
+        });
+    }
 });
 
 // START_CUSTOM_CODE_loginView
@@ -15,7 +31,9 @@ app.loginView = kendo.observable({
             sellerPassword: '',
             sellerEmail: '',
         },
-        submit: function() {app.mobileApp.navigate('components/ordersView/view.html');},
+        submit: function () {
+           app.mobileApp.navigate('components/ordersView/view.html');
+        },
         cancel: function () {}
     });
     parent.set('loginViewModel', loginViewModel);

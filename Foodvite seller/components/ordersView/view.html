@@ -3,12 +3,48 @@
         <div data-role="navbar">
             Orders
             <img src="icons/settings.png" class="nav-button nav-button-back nav-button-icon" data-align="left" data-role="button" href="components/settingsView/view.html" />
-            <input type="checkbox" data-role="switch" data-enable="true" data-align="right" data-off-label="off" data-on-label="on" />
+            <input id="orders-switch" type="checkbox" data-role="switch" data-change="Onchange" data-enable="true" data-align="right" data-off-label="off" data-on-label="on" data-checked="true" />
         </div>
     </div>
-    <p id="no-orders" hidden="hidden" class="no-items-msg">
-        <b>You have no orders yet.</b>
-    </p>
+    <div class="alignment">
+        <div id="error-message" class="error-message">Turn on the switch to accept orders</div>
+    </div>
+    <div id="orderdetailsView" class="form-view">
+      
+     <table id="test" style="width:100%" cellpadding="5">
+            <tr>
+                <td rowspan="2"><img class="user-avatar" data-align="left" src="icons/avatar.png" />
+                </td>
+                <td colspan="6">
+                    <br>santhosh will buy for kishan</td>
+            </tr>
+            <tr>
+                <td>
+                    <br><img class="call-user" data-align="left" src="icons/items.png" />
+                </td>
+                <td class="apply-border">
+                    <br>3 items
+                </td>
+                <td class="apply-border">
+                    <br><img class="call-user" data-align="centre" src="icons/cash.png" />
+                </td>
+                <td class="apply-border">
+                    <br>$45.00
+                </td>
+                <td class="apply-border">
+                    <br><img class="call-user" data-align="right" src="icons/seller-time.png" />
+                </td>
+                <td class="apply-border">
+                    <br>12:00 PM</td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFD166" color="ffffff" align="center">status</td>
+                <td colspan="6" class="apply-border">
+                    <br>03 Feb '16 | Order ID : 34234234</td>
+            </tr>
+        </table>
+        
+    </div>
     <a class="nav-button" data-align="right" data-role="button" href="components/orderDetailsView/view.html">orderdetails</a>
     <div data-role="footer">
     </div>

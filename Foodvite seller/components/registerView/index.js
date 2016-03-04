@@ -23,11 +23,6 @@ app.registerView = kendo.observable({
 
 });
 
-// START_CUSTOM_CODE_registerView
-// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
-
-
-// END_CUSTOM_CODE_registerView
 (function (parent) {
     var registerViewModel = kendo.observable({
             fields: {
@@ -54,7 +49,7 @@ app.registerView = kendo.observable({
                             "contactperson": $("#sellerContactPerson").val(),
                             "email": $("#sellerEmail").val(),
                             "deviceType": os.device,
-                            "deviceID": os.device.uid
+                            "deviceID": ""
                         })
                     },
                     dataType: "json",
@@ -66,23 +61,18 @@ app.registerView = kendo.observable({
                             $('#registerForm')[0].reset();
                             app.mobileApp.navigate('components/registersuccessView/view.html');
                         }
-                        if (errorCode == "100") {
+                        else if (errorCode == "100") {
+                            $('#registerForm')[0].reset();
                             alert(message);
-
                         }
-
                     },
                     error: function () {
                         $('#error-message-1').show();
                         $('#error-message-1').fadeOut(3000);
-
-                        ;
                     }
                 });
             }
-        }
-
-    );
+        });
     parent.set('registerViewModel', registerViewModel);
 })(app.registerView);
 

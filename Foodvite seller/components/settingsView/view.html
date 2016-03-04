@@ -1,31 +1,85 @@
-<div data-role="view" data-title="Settings" data-layout="main" data-model="app.settingsView" data-show="app.settingsView.onShow" data-after-show="app.settingsView.afterShow">
+<div id="settingsView" data-role="view" data-title="Settings" data-layout="main" data-model="app.settingsView" data-show="app.settingsView.onShow" data-after-show="app.settingsView.afterShow">
     <div data-role="header">
         <div data-role="navbar">
             <span class="foodvite-small">foodvite</span>
             <img class="nav-button nav-button-back nav-button-icon" data-align="left" data-role="backbutton" src="icons/back.png" />
-            <a class="nav-button-white" data-role="button" data-align="right">Update</a>
+            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: settingsViewModel.submit }" >Logout</a>
         </div>
+        <img class="seller-banner" data-align="centre" src="http://hotelsarojkrishna.com/img/gallery/6.jpg" />
+        <table class="nav">
+            <tr>
+                <td class="navfont">
+                    Restaurant Name
+                </td>
+            </tr>
+        </table>
     </div>
-    <div id="settingsViewModel" class="form-view">
-        <form>
-            <ul class="form-content" data-role="listview" data-style="inset">
-                <li>
-                    <label>
-                        <span class="foodvite-blue">Restaurant Name</span>
-                    </label>
-                </li>
-                <li>
-                    <label>
-                       <span class="foodvite-blue">Email</span>
-                    </label>
-                </li>
-                <li>
-                    <label>
-                        <span class="nav-button foodvite-blue" data-role="button" href="components/resetPasswordView/view.html">Change Password</span>
-                    </label>
-                </li>
-            </ul>
-        </form>
+    <div id="settingsView" class="form-view">
+        <ul class="form-content" data-role="listview" data-style="inset">
+            <table class="settings-view" cellpadding="15">
+                <tr>
+                    <td><img class="call-user" data-align="left" src="icons/email.png" />
+                    </td>
+                    <td><span class="foodvite-blue">Email</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <img class="call-user" data-align="left" src="icons/changepassword.png" />
+                    </td>
+                    <td><a href="components/resetPasswordView/view.html">
+                        <span class="foodvite-blue">Change Password</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="call-user" data-align="left" src="icons/notifications.png" />
+                    </td>
+                    <td><a href="components/notificationView/view.html">
+                        <span class="foodvite-blue" data-align="center">Notifications</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="call-user" data-align="left" src="icons/about.png" />
+                    </td>
+                    <td>
+                        <a href="components/aboutfoodviteView/view.html"><span class="foodvite-blue">About Foodvite</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="call-user" data-align="left" src="icons/FAQ.png" />
+                    </td>
+                    <td>
+                        <a href="components/FAQView/view.html"><span class="foodvite-blue" data-align="centre">FAQ</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="call-user" data-align="left" src="icons/request.png" />
+                    </td>
+                    <td><a href="components/submitarequestView/view.html">
+                        <span class="foodvite-blue">Submit a request</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="call-user" data-align="left" src="icons/orderhistory.png" />
+                    </td>
+                    <td><a href="components/orderhistoryView/view.html">
+                        <span class="foodvite-blue">Order History</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="call-user" data-align="left" src="icons/ordersummary.png" />
+                    </td>
+                    <td><a href="components/accountsummaryView/view.html">
+                        <span class="foodvite-blue">Account Summary</span>
+                    </td>
+                </tr>
+            </table>
+        </ul>
         <!-- START_CUSTOM_CODE_settingsViewModel -->
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
         <!-- END_CUSTOM_CODE_settingsViewModel -->

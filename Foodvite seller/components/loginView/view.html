@@ -3,22 +3,27 @@
         <div data-role="navbar" class="roboto">
             Log in
             <img class="nav-button nav-button-icon nav-button-back" data-bind="events: { click: loginViewModel.cancel }" data-align="left" data-role="backbutton" src="icons/back.png" />
-            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: loginViewModel.submit }">Done</a>
+            <a id="loginSubmit" class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: loginViewModel.submit }">Done</a>
         </div>
     </div>
     <div id="loginViewModel" class="form-view">
-        <form>
+        <form id="loginForm">
             <br>
-            <br><div class="alignment pacifico">foodvite</div>
+            <br>
+            <div class="alignment pacifico">foodvite</div>
+            <div class="alignment">
+                <span id="login-error-message-1" class="error-message">Error Occurred, Login Unsuccessful!</span>
+                <span id="login-error-message-2" class="error-message">Invalid email/password.</span>
+            </div>
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
                     <label>
-                        <input data-bind="value: loginViewModel.fields.sellerEmail" type="email" placeholder="Email" required validationMessage="Email is required!">
+                        <input id="sellerEmail2" data-bind="value: loginViewModel.fields.sellerEmail" type="email" placeholder="Email" required validationMessage="Email is required!">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input data-bind="value: loginViewModel.fields.sellerPassword" type="password" placeholder="Password" required data-required-msg="You must confirm your password">
+                        <input id="sellerPassword" data-bind="value: loginViewModel.fields.sellerPassword" type="password" placeholder="Password" required data-required-msg="You must confirm your password">
                     </label>
                 </li>
             </ul>
@@ -27,7 +32,21 @@
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
         <!-- END_CUSTOM_CODE_loginViewModel -->
     </div>
-    <!-- START_CUSTOM_CODE_loginView -->
-    <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
-    <!-- END_CUSTOM_CODE_loginView -->
+    <a href="#my-modal" class="forgotpassword nav-button" data-rel="modalview" data-role="button">Forgot Password?</a>
+</div>
+<div data-role="modalview" id="my-modal" style="width: auto ; height: auto;" data-modal="false">
+    <div id="loginViewModel" class="form-view">
+        <ul class="alignment form-content" data-role="listview" data-style="inset">
+            <h3>
+                Forgot Password?
+            </h3>
+            <li>
+                <label>
+                    <input data-bind="value: loginViewModel.fields.sellerEmail" type="email" placeholder="Email" required validationMessage="Email is required!">
+                </label>
+            </li>
+            <a id="register-submit" class="submit-button disabled" data-align="center" data-role="button" data-bind="events: { click: registerViewModel.submit }" data-click="closeModal">Reset Password</a>
+        </ul>
+    </div>
+</div>
 </div>
