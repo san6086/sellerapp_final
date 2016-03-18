@@ -11,8 +11,7 @@ app.settingsView = kendo.observable({
 // END_CUSTOM_CODE_settingsView
 (function (parent) {
     var settingsViewModel = kendo.observable({
-        submit: function () {
-            
+        submit: function () {        
             app.mobileApp.navigate('components/home/view.html');
         }
     });

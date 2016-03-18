@@ -31,8 +31,8 @@ app.loginView = kendo.observable({
             sellerPassword: '',
             sellerEmail: '',
         },
-        submit: function () {
-           app.mobileApp.navigate('components/ordersView/view.html');
+        submit: function () {      
+               app.mobileApp.navigate('components/ordersView/view.html');
         },
         cancel: function () {}
     });

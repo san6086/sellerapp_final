@@ -34,6 +34,7 @@ app.registerView = kendo.observable({
                 sellerName: ''
             },
             submit: function () {
+             //   var deviceID = kendo.device.uuid;
                 var os = kendo.support.mobileOS;
                 $.ajax({
                     url: "http://sit.foodvite.co:81/FVS/FV",
