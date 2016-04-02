@@ -6,15 +6,20 @@
             <input id="orders-switch" type="checkbox" data-role="switch" data-change="Onchange" data-enable="true" data-align="right" data-off-label="off" data-on-label="on" data-checked="true" />
         </div>
     </div>
+    
     <div class="alignment">
         <div id="error-message" class="error-message">Turn on the switch to accept orders</div>
+    <div id="error-message-2" class="error-message-2">Orders switch is turned on!</div>
     </div>
+    
+   
     <div id="orderdetailsView" class="form-view">
-        <table id="test" style="width:100%" cellpadding="5">
+      
+     <table id="test" style="width:100%" cellpadding="5">
             <tr>
                 <td rowspan="2"><img class="user-avatar" data-align="left" src="icons/avatar.png" />
                 </td>
-                <td colspan="6">
+                <td colspan="6" style= "color:#26547C">
                     <br>santhosh will buy for kishan</td>
             </tr>
             <tr>
@@ -37,108 +42,27 @@
                     <br>12:00 PM</td>
             </tr>
             <tr>
-                <td bgcolor="#FFD166" color="000000" align="center">status</td>
-                <td colspan="6" class="apply-border">
+                <td bgcolor="#FFD166" text-color="#ffffff" align="center">status</td>
+                <td colspan="6" class="apply-border" style= "color:#26547C">
                     <br>03 Feb '16 | Order ID : 34234234</td>
             </tr>
         </table>
+        
     </div>
-    <div id="orderdetailsView" class="form-view">
-        <table id="movies" style="width:100%" cellpadding="5">
-            
-        </table>
-    </div>
-    <script id="template" type="text/x-kendo-template">
-         <div id="orderdetailsView" class="form-view">
-         <tr>
-                <td rowspan="2"><img class="user-avatar" data-align="left" src="icons/avatar.png" />
-                </td>
-                <td colspan="6">
-                    <br>#= rank1 # will buy for #=rank2#</td>
-            </tr>
-            <tr>
-                <td>
-                    <br><img class="call-user" data-align="left" src="icons/items.png" />
-                </td>
-                <td class="apply-border">
-                    <br>#= rating # items
-                </td>
-                <td class="apply-border">
-                    <br><img class="call-user" data-align="centre" src="icons/cash.png" />
-                </td>
-                <td class="apply-border">
-                    <br>$#= rating #
-                </td>
-                <td class="apply-border">
-                    <br><img class="call-user" data-align="right" src="icons/seller-time.png" />
-                </td>
-                <td class="apply-border">
-                    <br>#= time #</td>
-            </tr>
-            <tr>
-                <td align="center">status</td>
-                <td color="ffffff" colspan="6" class="apply-border">
-                    <br>03 Feb '16 | Order ID : #= order #</td>
-            </tr>
-              </div>
-    </script>
-    <script>
-        $(document).ready(function () {
-            // create a template using the above definition
-            var template = kendo.template($("#template").html());
-
-            var movies = [
-                {
-                    "rank1": "santhosh",
-                    "rank2": "kishan",
-                    "rating": "9.00",
-                    "year": 1994,
-                    "title": "The Shawshank Redemption",
-                    "order": "242938423423",
-                    "time": "12:00 PM"
-                },
-                {
-                    "rank1": "santhosh",
-                    "rank2": "kishan",
-                    "rating": "9.00",
-                    "year": 1972,
-                    "title": "The Godfather",
-                    "order": "242938423423",
-                    "time": "12:00 PM"
-                },
-                {
-                    "rank1": "santhosh",
-                    "rank2": "kishan",
-                    "rating": "19.00",
-                    "year": 1974,
-                    "title": "The Godfather: Part II",
-                    "order": "242938423423",
-                    "time": "12:00 PM"
-                },
-                {
-                    "rank1": "santhosh",
-                    "rank2": "kishan",
-                    "rating": "9.00",
-                    "year": 1966,
-                    "title": "Il buono, il brutto, il cattivo.",
-                    "order": "242938423423",
-                    "time": "12:00 PM"
-                }
-
-                    ];
-
-            var dataSource = new kendo.data.DataSource({
-                data: movies,
-                change: function () { // subscribe to the CHANGE event of the data source
-                    $("#movies").html(kendo.render(template, this.view())); // populate the table
-                }
-            });
-
-            // read data from the "movies" array
-            dataSource.read();
-        });
-    </script>
     <a class="nav-button" data-align="right" data-role="button" href="components/orderDetailsView/view.html">orderdetails</a>
     <div data-role="footer">
     </div>
+    
+    <script>
+function Onchange() {
+        var switchInstance2 = $("#orders-switch").data("kendoMobileSwitch");
+    if (switchInstance2.check()) {
+        $('#error-message-2').show();
+        $('#error-message-2').fadeOut(5000);
+    } else {
+        $('#error-message').show();
+        $('#error-message').fadeOut(5000);
+ }
+ }
+</script>
 </div>
