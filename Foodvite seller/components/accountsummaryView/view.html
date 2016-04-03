@@ -2,7 +2,73 @@
     <div data-role="header">
         <div data-role="navbar">
             Account Summary
+            <img class="nav-button nav-button-back nav-button-icon" data-align="left" data-role="backbutton" src="icons/back.png" />
         </div>
     </div>
+    <a id="register-submit" class="submit-button button-group" data-align="center" data-role="button">Daily Summary</a>
+    <br>
+    <br>
+    <table style="width:100%">
+        <tr>
+            <td>No. of Orders</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>Total Order Value</td>
+            <td>$450.99</td>
+        </tr>
+        <tr>
+            <td>Joins</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>Commission</td>
+            <td>$40.99</td>
+        </tr>
+        <tr>
+            <td>Cancelled Orders</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <a id="register-submit" class="submit-button button-group" data-align="center" data-role="button">Consolidated Summary</a>
+    <br>
+    <br>
+    <div class="alignment">
+        <label>
+            <span>From </span>
+            <input id="datepicker1" type="date" /> </label>
+        <label>
+            <span>To </span>
+            <input id="datepicker2" type="date" />
+        </label>
+        <br>
+        <br>
+        <a id="register-submit" class="submit-button" data-align="center" data-role="button" data-bind="events: { click: registerViewModel.submit }">Submit</a>
     </div>
-  
+    <table style="width:100%">
+        <tr>
+            <td>No. of Orders</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>Total Order Value</td>
+            <td>$450.99</td>
+        </tr>
+        <tr>
+            <td>Joins</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>Commission</td>
+            <td>$40.99</td>
+        </tr>
+        <tr>
+            <td>Cancelled Orders</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <div data-role="footer">
+    </div>
+</div>

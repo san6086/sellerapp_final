@@ -1,8 +1,19 @@
 <div data-role="view" id="submitarequestView" data-title="Submit a request" data-layout="main" data-model="app.submitarequestView" data-show="app.submitarequestView.onShow" data-after-show="app.submitarequestView.afterShow">
     <div data-role="header">
         <div data-role="navbar">
-            Submit a request
+            Feedback
+            <img class="nav-button nav-button-icon nav-button-back" data-align="left" data-role="backbutton" src="icons/back.png" />
+            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: submitarequestModel.submit }">Done</a>
         </div>
     </div>
+    <br>
+    <div class="alignment">
+        <div>
+            Foodvite lets you send feedback about our service. We also welcome problem reports, feature ideas and general comments.
+        </div>
+        <br>
+        <textarea id="editor" style="height:200px;border:none;" placeholder="Describe your feedback here.."></textarea>
     </div>
-  
+    <div data-role="footer">
+    </div>
+</div>

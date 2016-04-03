@@ -1,41 +1,43 @@
-<div id="settingsView" data-role="view" data-title="Settings" data-layout="main" data-model="app.settingsView" data-show="app.settingsView.onShow" data-after-show="app.settingsView.afterShow">
-    <div data-role="header">
-        <div data-role="navbar">
-            <span class="foodvite-small">foodvite</span>
-            <img class="nav-button nav-button-back nav-button-icon" data-align="left" data-role="backbutton" src="icons/back.png" />
-            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: settingsViewModel.submit }" >Logout</a>
-        </div>
-        <img class="seller-banner" data-align="centre" src="http://hotelsarojkrishna.com/img/gallery/6.jpg" />
-        <table class="nav">
-            <tr>
-                <td class="navfont">
-                    Restaurant Name
-                </td>
-            </tr>
-        </table>
+<div id="settingsView" data-role="view" data-title="Settings" data-layout="default" data-model="app.settingsView" data-show="app.settingsView.onShow" data-after-show="app.settingsView.afterShow">
+    <img class="nav-button nav-button-back nav-button-icon" data-align="right" data-role="backbutton" src="icons/arrows-2.png" />
+    <div class="alignment">
+        <span class="foodvite-small foodvite-blue" data-align="center">foodvite</span>
     </div>
-    <div id="settingsView" class="form-view">
+    <div class="form-view">
         <ul class="form-content" data-role="listview" data-style="inset">
-            <table class="settings-view" cellpadding="15">
+            <table class="settings-view" cellpadding="8">
                 <tr>
                     <td><img class="call-user" data-align="left" src="icons/email.png" />
                     </td>
-                    <td><span class="foodvite-blue">Email</span>
+                    <td>
+                        <a class="nav-button" data-align="right" data-role="button">
+                            <span id="selleremailid" class="foodvite-blue"></span>
+                        </a>
                     </td>
+                    
                 </tr>
                 <tr>
                     <td> <img class="call-user" data-align="left" src="icons/changepassword.png" />
                     </td>
-                    <td><a href="components/resetPasswordView/view.html">
-                        <span class="foodvite-blue">Change Password</span></a>
+                    <td>
+                        <a class="nav-button" data-align="right" data-role="button" href="components/resetPasswordView/view.html">
+                            <span class="foodvite-blue">Change Password</span>
+                        </a>
+                    </td>
+                     <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img class="call-user" data-align="left" src="icons/notifications.png" />
                     </td>
-                    <td><a href="components/notificationView/view.html">
-                        <span class="foodvite-blue" data-align="center">Notifications</span>
+                    <td>
+                        <a class="nav-button" data-align="right" data-role="button" href="components/notificationView/view.html">
+                            <span class="foodvite-blue" data-align="center">Notifications</span>
+                    </td>
+                         <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
                     </td>
                 </tr>
                 <tr>
@@ -43,7 +45,10 @@
                         <img class="call-user" data-align="left" src="icons/about.png" />
                     </td>
                     <td>
-                        <a href="components/aboutfoodviteView/view.html"><span class="foodvite-blue">About Foodvite</span></a>
+                        <a class="nav-button" data-align="right" data-role="button" href="components/aboutfoodviteView/view.html"><span class="foodvite-blue">About Foodvite</span></a>
+                    </td>
+                     <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
                     </td>
                 </tr>
                 <tr>
@@ -51,31 +56,60 @@
                         <img class="call-user" data-align="left" src="icons/FAQ.png" />
                     </td>
                     <td>
-                        <a href="components/FAQView/view.html"><span class="foodvite-blue" data-align="centre">FAQ</span></a>
+                        <a class="nav-button" data-align="right" data-role="button" href="components/FAQView/view.html"><span class="foodvite-blue" data-align="centre">FAQ</span></a>
+                    </td>
+                     <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img class="call-user" data-align="left" src="icons/request.png" />
+                        <img class="call-user" data-align="left" src="icons/feedback.png" />
                     </td>
-                    <td><a href="components/submitarequestView/view.html">
-                        Submit a request</a>
+                    <td>
+                        <a class="nav-button" data-align="right" data-role="button" href="components/submitarequestView/view.html">
+                            <span class="foodvite-blue">Feedback</span>
+                        </a>
+                    </td>
+                     <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <img class="call-user" data-align="left" src="icons/orderhistory.png" />
                     </td>
-                    <td><a href="components/orderhistoryView/view.html">
-                        <span class="foodvite-blue">Order History</span></a>
+                    <td>
+                        <a class="nav-button" data-align="right" data-role="button" href="components/orderhistoryView/view.html">
+                            <span class="foodvite-blue">Order History</span>
+                        </a>
+                    </td>
+                     <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <img class="call-user" data-align="left" src="icons/ordersummary.png" />
+                        <img class="call-user" data-align="left" src="icons/account-summary.png" />
                     </td>
-                    <td><a href="components/accountsummaryView/view.html">
-                        <span class="foodvite-blue">Account Summary</span>
+                    <td>
+                        <a class="nav-button" data-align="right" data-role="button" href="components/accountsummaryView/view.html">
+                            <span class="foodvite-blue">Account Summary</span>
+                    </td>
+                         <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="call-user" data-align="left" src="icons/arrows-4.png" />
+                    </td>
+                    <td>
+                        <a class="nav-button" data-align="right" data-role="button"  data-bind="events: { click: settingsViewModel.submit }">
+                            <span class="foodvite-blue">Log out</span>
+                    </td>
+                        <td>
+                        <img class="call-user-arrow" data-align="left" src="icons/arrows.png" />
                     </td>
                 </tr>
             </table>
@@ -84,4 +118,8 @@
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
         <!-- END_CUSTOM_CODE_settingsViewModel -->
     </div>
+    <script type="text/javascript">
+          alert(localStorage.getItem('email'));
+         $("#selleremailid").text(localStorage.getItem('email'));   
+    </script>
 </div>

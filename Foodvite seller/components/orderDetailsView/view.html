@@ -1,22 +1,22 @@
 <div data-role="view" data-title="Order Details" data-layout="main-nonav" data-model="app.orderDetailsView" data-show="app.orderDetailsView.onShow" data-after-show="app.orderDetailsView.afterShow">
     <div data-role="header">
         <div data-role="navbar">
-            Order details
+            Order Detail
             <img class="nav-button nav-button-icon nav-button-back" data-align="left" data-role="backbutton" src="icons/back.png" />
         </div>
     </div>
-    <div id="orderdetailsView" class="form-view">
+    <div id="orderdetailsView" class="form-view" data-position="fixed">
         <form>
             <ul class="form-content" data-role="listview" data-style="inset">
-                <div style="position: relative; height: 50%;" class="form-view" border-style="solid" border-width="thin" border-color="#000000">
+                <div style="position: relative; height: 50%;border-style:solid ; border-width:thin; border-color:#ffffff; border-bottom:#c9c9c9;" class="form-view">
                     <li>
                         <table>
                             <tr>
                                 <td>
-                                    <img class="user-avatar" data-align="left" src="icons/avatar.png" />
+                                    <img class="user-avatar" data-align="left" src="https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/793b84fb-169c-49b1-9831-95a190d1c92d/1478233246.png" />
                                 </td>
                                 <td>
-                                    <p data-align="centre" color="#35a7ff">
+                                    <p data-align="centre" style="color:#35a7ff">
                                         Santhosh will collect for Kishan at 12:00 PM
                                     </p>
                                     <table>
@@ -25,8 +25,8 @@
                                             </td>
                                             <td>
                                                 <div class="button-group" data-align="centre">
-                                                    <a data-role="button" data-align="centre">santhosh narayanan</a>
-                                                    <a data-role="button" data-align="centre">kishan</a>
+                                                    <a data-role="button" data-align="centre" href="tel:+6598561980" data-rel="external">santhosh</a>
+                                                    <a data-role="button" data-align="centre" href="tel:+6584783482" data-rel="external">kishan</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -34,36 +34,67 @@
                                 </td>
                             </tr>
                         </table>
-                    </li>
+                    </li><br>
                     <li>
-                        <p data-align="centre" color="#35a7ff">
+                        <p data-align="centre" style="color:#35a7ff; border-bottom=#c9c9c9;">
                             03 Jan 16 | Order ID: 237428734t
-                        </p>
+                        </p><br>
                     </li>
                 </div>
             </ul>
         </form>
     </div>
+    <div id="orderdetailsView" class="form-view summary-2">
+        <table id="test" style="width:100%" cellpadding="5">
+            <tr>
+                <td style="color:#26547C">02 X Egg Briyani</td>
+                <td style="color:#EF476F">$45.00</td>
+            </tr>
+            <tr>
+                <td style="color:#d3d3d3">less spicy</td>
+            </tr>
+        </table>
+        <table id="test" style="width:100%" cellpadding="5">
+            <tr>
+                <td style="color:#26547C">02 X Egg Briyani</td>
+                <td style="color:#EF476F">$45.00</td>
+            </tr>
+            <tr>
+                <td style="color:#d3d3d3">less spicy</td>
+            </tr>
+        </table>
+        <table id="test" style="width:100%" cellpadding="5">
+            <tr>
+                <td style="color:#26547C">02 X Egg Briyani</td>
+                <td style="color:#EF476F">$45.00</td>
+            </tr>
+            <tr>
+                <td style="color:#d3d3d3">less spicy</td>
+            </tr>
+        </table>
+    </div>
+    <div data-role="footer">
+    </div>
     <div class="summary" data-role="footer" data-position="fixed" data-align="centre">
         <table>
             <tr>
-                <td>Total Items:</td>
-                <td>3</td>
+                <td style="color:#26547C">Total Items:</td>
+                <td style="color:#26547C">3</td>
             </tr>
             <tr>
-                <td>Total:</td>
-                <td>$30.00</td>
+                <td style="color:#26547C">Total:</td>
+                <td style="color:#26547C">$30.00</td>
             </tr>
             <tr>
-                <td>Total price includes:</td>
+                <td style="color:#d3d3d3">Total price includes:</td>
             </tr>
             <tr>
-                <td>Sub-total</td>
-                <td>$29.00</td>
+                <td style="color:#d3d3d3">Sub-total</td>
+                <td style="color:#d3d3d3">$29.00</td>
             </tr>
             <tr>
-                <td>GST(7.00%)</td>
-                <td>$1.00</td>
+                <td style="color:#d3d3d3">GST(7.00%)</td>
+                <td style="color:#d3d3d3">$1.00</td>
             </tr>
         </table>
     </div>

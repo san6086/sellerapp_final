@@ -325,8 +325,7 @@
      font-size: 20px;
      font-weight: 200;
  }
-
-#kendoUiMobileApp #loginView .forgotpassword {
+ #kendoUiMobileApp #loginView .forgotpassword {
      margin-top: 25% auto;
      margin-left: 25% auto;
      margin-bottom: 25% auto;
@@ -336,20 +335,29 @@
      font-size: 15px;
      font-weight: 200;
  }
-
  #kendoUiMobileApp #loginView .pacifico {
      font-family: 'Pacifico';
      font-size: 35px;
  }
-
  #kendoUiMobileApp #loginView .error-message {
      color: #E7476F;
      font-size: 15px;
  }
-
-#kendoUiMobileApp #loginView .disabled {
+ #kendoUiMobileApp #loginView .disabled {
      opacity: .35;
      pointer-events: none;
+ }
+ #kendoUiMobileApp #loginView .submit-button {
+     display: table-cell;
+     margin-top: 25% auto;
+     margin-left: 25% auto;
+     margin-bottom: 25% auto;
+     margin-right: 25% auto;
+     text-align: center;
+     color: #ffffff;
+     background-color: #35a7ff;
+     font-size: 15px;
+     font-weight: 200;
  }
  /* Register View */
  
@@ -391,6 +399,11 @@
      font-family: 'Pacifico';
      font-size: 50px;
  }
+
+ #kendoUiMobileApp #resetpasswordView .disabled {
+     opacity: .35;
+     pointer-events: none;
+ }
  /* Orders View */
  
  #kendoUiMobileApp #ordersView .call-user {
@@ -429,6 +442,7 @@
  #kendoUiMobileApp #ordersView .user-avatar {
      float: left;
      width: 70px;
+      border-radius: 50%;
  }
  #kendoUiMobileApp #ordersView .user-avatar img {
      width: 70px;
@@ -446,15 +460,22 @@
      font-weight: 100;
      width: 100%
  }
+ #kendoUiMobileApp #ordersView .error-message-2 {
+     color: #FFFFFF;
+     background: #06D6A0;
+     width: 100%;
+ }
  /* Orderdetails View */
  
  #kendoUiMobileApp #orderdetailsView .user-avatar {
      float: left;
      width: 70px;
+      border-radius: 50%;
  }
  #kendoUiMobileApp #orderdetailsView .user-avatar img {
      width: 50px;
      height: 50px;
+     border-radius: 50%;
  }
  #kendoUiMobileApp #orderdetailsView .call-user {
      color: #000000;
@@ -466,14 +487,37 @@
      color: #ffffff;
      background-color: #35a7ff;
  }
+ #kendoUiMobileApp .summary {
+     display: table;
+     border-collapse: separate;
+     border: gray;
+     width: 100%;
+     border-top: 1px solid #c9c9c9;
+ }
  #kendoUiMobileApp .summary table {
      display: table;
      border-collapse: separate;
      border: gray;
      margin-left: 1em;
      width: 100%;
+    
  }
  #kendoUiMobileApp .summary td:nth-of-type(even) {
+     text-align: left;
+ }
+ #kendoUiMobileApp .summary-2 table {
+     display: table;
+     border-collapse: separate;
+     border: gray;
+     margin-top: 25% auto;
+     margin-left: 25% auto;
+     margin-bottom: 25% auto;
+     margin-right: 25% auto;
+     text-align: center;
+     width: 100%;
+     border-bottom: 1px solid #c9c9c9;
+ }
+ #kendoUiMobileApp .summary-2 td:nth-of-type(odd) {
      text-align: left;
  }
  #kendoUiMobileApp #orderdetailsView .apply-border td {
@@ -484,11 +528,33 @@
      border-left: none;
  }
  #kendoUiMobileApp #orderdetailsView div .apply-border {
-     border-top: 1px solid #c9c9c9;
      border-bottom: 1px solid #c9c9c9;
+ }
+ #kendoUiMobileApp #orderdetailsView .alignment {
+     margin-top: 25% auto;
+     margin-left: 25% auto;
+     margin-bottom: 25% auto;
+     margin-right: 25% auto;
+     text-align: center;
+     font-size: 15px;
+     font-weight: 100;
+ }
+
+#kendoUiMobileApp #orderdetailsView li {
+     border-bottom: 1px solid #c9c9c9;
+    margin:0em
  }
  /* Settings View */
  
+ #kendoUiMobileApp #settingsView .alignment {
+     margin-top: 25% auto;
+     margin-left: 25% auto;
+     margin-bottom: 25% auto;
+     margin-right: 25% auto;
+     text-align: center;
+     font-size: 15px;
+     font-weight: 100;
+ }
  #kendoUiMobileApp #settingsView .seller-banner {
      float: left;
      width: 100%;
@@ -521,6 +587,12 @@
      width: 25px;
      float: left;
  }
+ #kendoUiMobileApp #settingsView .call-user-arrow {
+     color: #000000;
+     background-color: transparent;
+     width: 15px;
+     float: left;
+ }
  #kendoUiMobileApp #settingsView li {
      margin: 0 0 1em 3em;
      padding: .4em 0;
@@ -545,4 +617,119 @@
      margin: 0 0 1em 2em;
      padding: 3em 0;
      display: table;
+ }
+ #kendoUiMobileApp #settingsView .km-content {
+     background: linear-gradient(#06D6A0, #35A7FF);
+ }
+ #kendoUiMobileApp #settingsView .km-flat .km-header .km-navbar {
+     min-height: 3.15em;
+ }
+ #kendoUiMobileApp #settingsView .km-flat .km-header .km-navbar {
+     border-bottom: 1px none #c9c9c9;
+     background: transparent;
+     opacity: 0;
+ }
+ #kendoUiMobileApp #settingsView .km-flat .km-header .km-view-title {
+     font-size: 1.3em;
+     background: transparent;
+     color: none;
+ }
+ #kendoUiMobileApp #settingsView .foodvite-blue {
+     color: #FFFFFF;
+ }
+ #kendoUiMobileApp #settingsView .foodvite-small {
+     font-family: 'Pacifico';
+     font-size: 1.8em;
+ }
+ #kendoUiMobileApp #settingsView .nav-button-icon {
+     display: inline-block;
+     width: 20px;
+     height: 20px;
+     margin: 5% 0% 0% 90%;
+     padding: 0;
+     background-position: 50% 50%;
+     background-repeat: no-repeat;
+ }
+ /* Account Summary */
+ 
+ #kendoUiMobileApp #accountsummaryView .alignment {
+     margin-top: 25% auto;
+     margin-left: 25% auto;
+     margin-bottom: 25% auto;
+     margin-right: 25% auto;
+     text-align: center;
+     font-size: 15px;
+     font-weight: 100;
+ }
+ #kendoUiMobileApp #accountsummaryView .km-footer {
+     background-color: #35a7ff;
+     border-width: 0 0 1px;
+     border-color: #c9c9c9;
+     padding-top: .5em;
+     min-height: 3.15em;
+ }
+ #kendoUiMobileApp #accountsummaryView .button-group .km-button {
+     display: table-cell;
+     margin: 1em 0;
+ }
+ /* Submit a request view */
+ 
+ #kendoUiMobileApp #submitarequestView .km-footer {
+     background-color: #35a7ff;
+     border-width: 0 0 1px;
+     border-color: #c9c9c9;
+     padding-top: .5em;
+     min-height: 3.15em;
+ }
+ #kendoUiMobileApp #submitarequestView .alignment {
+     margin-top: 25% auto;
+     margin-left: 25% auto;
+     margin-bottom: 25% auto;
+     margin-right: 25% auto;
+     text-align: center;
+     font-size: 14px;
+     font-weight: 100;
+ }
+ #kendoUiMobileApp #submitarequestView .km-footer {
+     background-color: #35a7ff;
+     border-width: 0 0 1px;
+     border-color: #c9c9c9;
+     padding-top: .5em;
+     min-height: 3.15em;
+ }
+ /* FAQ view */
+ 
+ #kendoUiMobileApp #FAQView .km-footer {
+     background-color: #35a7ff;
+     border-width: 0 0 1px;
+     border-color: #c9c9c9;
+     padding-top: .5em;
+     min-height: 3.15em;
+ }
+ /* About foodvite */
+ 
+ #kendoUiMobileApp #aboutfoodviteView .km-footer {
+     background-color: #35a7ff;
+     border-width: 0 0 1px;
+     border-color: #c9c9c9;
+     padding-top: .5em;
+     min-height: 3.15em;
+ }
+ /* Notification View */
+ 
+ #kendoUiMobileApp #notificationView .km-footer {
+     background-color: #35a7ff;
+     border-width: 0 0 1px;
+     border-color: #c9c9c9;
+     padding-top: .5em;
+     min-height: 3.15em;
+ }
+ /* Order history View */
+ 
+ #kendoUiMobileApp #orderhistoryView .km-footer {
+     background-color: #35a7ff;
+     border-width: 0 0 1px;
+     border-color: #c9c9c9;
+     padding-top: .5em;
+     min-height: 3.15em;
  }

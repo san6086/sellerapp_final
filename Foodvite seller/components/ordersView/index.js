@@ -1,16 +1,20 @@
 'use strict';
 
 app.ordersView = kendo.observable({
-    onShow: function () {},
+    onShow: function () {
+        
+    },
     afterShow: function () {
         $('#error-message').hide();
+        $('#error-message-2').hide();
         var switchInstance = $("#orders-switch").data("kendoMobileSwitch");
         if (switchInstance.check()) {
             $('#error-message').hide();
+            $('#error-message-2').hide();
         } else {
             $('#error-message').show();
             $('#error-message').fadeOut(5000);
-            
+
         }
 
     }

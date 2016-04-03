@@ -6,7 +6,7 @@
             <a id="loginSubmit" class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: loginViewModel.submit }">Done</a>
         </div>
     </div>
-    <div id="loginViewModel" class="form-view">
+    <div id="loginView" class="form-view">
         <form id="loginForm">
             <br>
             <br>
@@ -18,12 +18,12 @@
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
                     <label>
-                        <input id="sellerEmail2" data-bind="value: loginViewModel.fields.sellerEmail" type="email" placeholder="Email" required validationMessage="Email is required!">
+                        <input id="sellerloginEmail" data-bind="value: loginViewModel.fields.sellerloginEmail" type="email" placeholder="Email" required="required">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input id="sellerPassword" data-bind="value: loginViewModel.fields.sellerPassword" type="password" placeholder="Password" required data-required-msg="You must confirm your password">
+                        <input id="sellerloginPassword" data-bind="value: loginViewModel.fields.sellerloginPassword" type="password" placeholder="Password" required="required">
                     </label>
                 </li>
             </ul>
@@ -34,18 +34,18 @@
     </div>
     <a href="#my-modal" class="forgotpassword nav-button" data-rel="modalview" data-role="button">Forgot Password?</a>
 </div>
-<div data-role="modalview" id="my-modal" style="width: auto ; height: auto;" data-modal="false">
-    <div id="loginViewModel" class="form-view">
-        <ul class="alignment form-content" data-role="listview" data-style="inset">
-            <h3>
+<div class="alignment" data-role="modalview" id="my-modal" style="width: auto ; height: auto;" data-modal="false">
+    <div id="loginView" class="form-view alignment">
+        <ul class="form-content forgotpassword" data-role="listview" data-style="inset">
+            <h3 style="color:#35A7FF">
                 Forgot Password?
             </h3>
             <li>
                 <label>
-                    <input data-bind="value: loginViewModel.fields.sellerEmail" type="email" placeholder="Email" required validationMessage="Email is required!">
+                    <input id="sellerchangepasswordEmail" data-bind="value: loginViewModel.fields.sellerchangepasswordEmail" type="email" placeholder="Email" required="required">
                 </label>
             </li>
-            <a id="register-submit" class="submit-button disabled" data-align="center" data-role="button" data-bind="events: { click: registerViewModel.submit }" data-click="closeModal">Reset Password</a>
+            <br><a id="register-submit" class="submit-button button-group" data-align="center" data-role="button" data-bind="events: { click: loginViewModel.passwordsubmit }">Submit</a>
         </ul>
     </div>
 </div>

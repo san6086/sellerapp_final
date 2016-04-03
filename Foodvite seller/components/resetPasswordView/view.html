@@ -3,37 +3,38 @@
         <div data-role="navbar">
             Change Password
             <img class="nav-button nav-button-icon nav-button-back" data-align="left" data-role="backbutton" src="icons/back.png" data-bind="events: { click: resetPasswordViewModel.cancel }"/>
-            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: resetPasswordViewModel.submit }">Done</a>
+            <a id="resetpasswordsubmit" class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: resetPasswordViewModel.submit }">Done</a>
         </div>
     </div>
     <br><div class="alignment pacifico">foodvite</div>
     <div id="resetpasswordView" class="form-view">
-        <form>
+        <form id="resetpasswordform">
             <ul class="form-content" data-role="listview" data-style="inset">
                 <li>
                     <label>
-                        <input data-bind="value: resetPasswordViewModel.fields.sellerOldPassword" type="password" placeholder="Old Password">
+                        <input id="sellerOldPassword" data-bind="value: resetPasswordViewModel.fields.sellerOldPassword" type="password" placeholder="Old Password" required="required">
                     </label>
                 </li>
                 <li>
                     <label>
-                        <input data-bind="value: resetPasswordViewModel.fields.sellerNewPassword" type="password" placeholder="New Password">
+                        <input id="sellerNewPassword" data-bind="value: resetPasswordViewModel.fields.sellerNewPassword" name="password" type="password" placeholder="New Password" required="required">
                     </label>
                 </li>
-                <li>
+                <li><span class="k-invalid-msg" data-for="password-confirm"></span>
                     <label>
-                        <input data-bind="value: resetPasswordViewModel.fields.sellerConfirmPassword" type="password" placeholder="Confirm Password">
+                        <input id="sellerConfirmPassword" data-bind="value: resetPasswordViewModel.fields.sellerConfirmPassword"  name="password-confirm" type="password" placeholder="Confirm Password" required="required">
                     </label>
                 </li>
             </ul>
             
         </form>
-        
+       
         <!-- START_CUSTOM_CODE_resetPasswordViewModel -->
         <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
         <!-- END_CUSTOM_CODE_resetPasswordViewModel -->
     </div>
     <!-- START_CUSTOM_CODE_resetPasswordView -->
+     
     <!-- Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes -->
     <!-- END_CUSTOM_CODE_resetPasswordView -->
 </div>
