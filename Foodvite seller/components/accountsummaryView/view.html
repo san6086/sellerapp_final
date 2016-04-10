@@ -8,28 +8,10 @@
     <a id="register-submit" class="submit-button button-group" data-align="center" data-role="button">Daily Summary</a>
     <br>
     <br>
-    <table style="width:100%">
-        <tr>
-            <td>No. of Orders</td>
-            <td>45</td>
-        </tr>
-        <tr>
-            <td>Total Order Value</td>
-            <td>$450.99</td>
-        </tr>
-        <tr>
-            <td>Joins</td>
-            <td>34</td>
-        </tr>
-        <tr>
-            <td>Commission</td>
-            <td>$40.99</td>
-        </tr>
-        <tr>
-            <td>Cancelled Orders</td>
-            <td>6</td>
-        </tr>
-    </table>
+    <div id="accountsummaryView" class="form-view">
+        <table id="accounts" style="width:100%" cellpadding="5">
+        </table>
+    </div>
     <br>
     <br>
     <a id="register-submit" class="submit-button button-group" data-align="center" data-role="button">Consolidated Summary</a>
@@ -47,28 +29,76 @@
         <br>
         <a id="register-submit" class="submit-button" data-align="center" data-role="button" data-bind="events: { click: registerViewModel.submit }">Submit</a>
     </div>
-    <table style="width:100%">
-        <tr>
-            <td>No. of Orders</td>
-            <td>45</td>
-        </tr>
-        <tr>
-            <td>Total Order Value</td>
-            <td>$450.99</td>
-        </tr>
-        <tr>
-            <td>Joins</td>
-            <td>34</td>
-        </tr>
-        <tr>
-            <td>Commission</td>
-            <td>$40.99</td>
-        </tr>
-        <tr>
-            <td>Cancelled Orders</td>
-            <td>6</td>
-        </tr>
-    </table>
+    <script id="template2" type="text/x-kendo-template">
+        <div id="orderdetailsView" class="form-view">
+            <tr>
+                <td>No. of Orders</td>
+                <td>#= totalOrders #</td>
+            </tr>
+            <tr>
+                <td>Total Order Value</td>
+                <td>$#= totalOrderValue #</td>
+            </tr>
+            <tr>
+                <td>Joins</td>
+                <td>#= joins #</td>
+            </tr>
+            <tr>
+                <td>Commission</td>
+                <td>$#= commission #</td>
+            </tr>
+            <tr>
+                <td>Cancelled Orders</td>
+                <td>#= cancelledOrder #</td>
+            </tr>
+    </script>
+    <script>
+        $(document).ready(function () {
+            // create a template using the above definition
+            var template = kendo.template($("#template2").html());
+            var sellerId2 = localStorage.getItem('sellerId');
+            var orders11=[];
+            $.ajax({
+                url: "http://sit.foodvite.co:8080/FVS/v1/dailyOrdersSummary",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "sellerId": sellerId2
+                }),
+                dataType: "json",
+                success: function (data) {
+                    var ob = JSON.parse(JSON.stringify(data));
+                    var totalOrders = ob.data["totalOrders"];
+                    var totalOrderValue = ob.data["totalOrderValue"];
+                    var joins = ob.data["joins"];
+                    var commission = ob.data["commission"];
+                    var cancelledOrder = ob.data["cancelledOrder"];
+                }
+            });
+            var orders11 = [
+                {
+                    "totalOrders": 10,
+                    "totalOrderValue": 100,
+                    "joins": 12,
+                    "commission": 20,
+                    "cancelledOrder": 3
+                }];
+            
+            var dataSource = new kendo.data.DataSource({
+                data: orders11,
+                change: function () { // subscribe to the CHANGE event of the data source
+                    $("#accounts").html(kendo.render(template, this.view())); // populate the table
+                }
+            });
+            dataSource.read();
+        });
+    </script>
+    
+    
+    
+    
+    
+    
     <div data-role="footer">
     </div>
-</div>
+    </div>
