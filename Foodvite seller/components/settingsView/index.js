@@ -30,14 +30,16 @@ app.settingsView = kendo.observable({
                             var ob = JSON.parse(JSON.stringify(data));
                             var errorCode = ob.responseCode;
                             var responsemessage = ob.message;
-
-                            if (errorCode == 101) {
-                                app.mobileApp.intiliaze();
+                            if (errorCode == 101) {                         
                                 app.mobileApp.navigate('components/home/view.html');
+                                app.mobileApp.intiliaze();
+                                localStorage.clear();
                             }
                             else if (errorCode == 100) {
-
-                                alert(responsemessage);
+                               alert(responsemessage);
+                                app.mobileApp.navigate('components/home/view.html');
+                                app.mobileApp.intiliaze();
+                                localStorage.clear();
                             }
                         },
                         error: function () {

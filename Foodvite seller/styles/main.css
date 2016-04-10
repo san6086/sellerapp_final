@@ -465,6 +465,14 @@
      background: #06D6A0;
      width: 100%;
  }
+#kendoUiMobileApp #ordersView .apply-border td {
+     table-layout: fixed;
+     border-left: 1px solid #c9c9c9;
+ }
+
+ #kendoUiMobileApp #ordersView .apply-border table td:first-child {
+     border-left: none;
+ }
  /* Orderdetails View */
  
  #kendoUiMobileApp #orderdetailsView .user-avatar {
@@ -732,4 +740,15 @@
      border-color: #c9c9c9;
      padding-top: .5em;
      min-height: 3.15em;
+ }
+
+#kendoUiMobileApp #notificationView .alignment {
+     margin-top: 25% auto;
+     margin-left: 25% auto;
+     margin-bottom: 25% auto;
+     margin-right: 25% auto;
+     text-align: center;
+     color: #35a7ff;
+     font-size: 20px;
+     font-weight: 200;
  }

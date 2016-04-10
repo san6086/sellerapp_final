@@ -3,7 +3,7 @@
         <div data-role="navbar">
             Feedback
             <img class="nav-button nav-button-icon nav-button-back" data-align="left" data-role="backbutton" src="icons/back.png" />
-            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: submitarequestModel.submit }">Done</a>
+            <a class="nav-button-white" data-role="button" data-align="right" data-bind="events: { click: submitarequestViewModel.submit }">Done</a>
         </div>
     </div>
     <br>
@@ -12,7 +12,7 @@
             Foodvite lets you send feedback about our service. We also welcome problem reports, feature ideas and general comments.
         </div>
         <br>
-        <textarea id="editor" style="height:200px;border:none;" placeholder="Describe your feedback here.."></textarea>
+        <textarea id="editor" data-bind="value: submitarequestViewModel.fields.editor" style="height:200px;border:none;" placeholder="Describe your feedback here.."></textarea>
     </div>
     <div data-role="footer">
     </div>

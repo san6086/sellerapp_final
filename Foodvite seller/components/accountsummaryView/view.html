@@ -57,33 +57,47 @@
             // create a template using the above definition
             var template = kendo.template($("#template2").html());
             var sellerId2 = localStorage.getItem('sellerId');
-            var orders11=[];
+            var orders11 = [];
             $.ajax({
-                url: "http://sit.foodvite.co:8080/FVS/v1/dailyOrdersSummary",
+                url: "http://sit.foodvite.co:8080/FVS/v1/customOrdersSummary",
                 type: "POST",
                 contentType: "application/json",
                 data: JSON.stringify({
-                    "sellerId": sellerId2
+                    "sellerId": "6948301204538886805",
+                    "startDate": "2016-03-12",
+                    "endDate": "2016-03-16"
                 }),
                 dataType: "json",
                 success: function (data) {
                     var ob = JSON.parse(JSON.stringify(data));
                     var totalOrders = ob.data["totalOrders"];
+                    alert(totalOrders);
+                    localStorage.setItem('dailysummary_totalOrders',totalOrders);
                     var totalOrderValue = ob.data["totalOrderValue"];
+                    alert(totalOrderValue);
+                    localStorage.setItem('dailysummary_totalOrderValue',totalOrderValue);
                     var joins = ob.data["joins"];
+                    alert(joins);
+                    localStorage.setItem('dailysummary_joins',joins);
                     var commission = ob.data["commission"];
+                    alert(commission);
+                    localStorage.setItem('dailysummary_commission',commission);
                     var cancelledOrder = ob.data["cancelledOrder"];
+                    alert(cancelledOrder);
+                    localStorage.setItem('dailysummary_cancelledOrder',cancelledOrder);
+                    var report = ob.data["reportList"];
+                    alert(JSON.stringify(report[0].date));
                 }
             });
             var orders11 = [
                 {
-                    "totalOrders": 10,
-                    "totalOrderValue": 100,
-                    "joins": 12,
-                    "commission": 20,
+                    "totalOrders": localStorage.getItem('dailysummary_totalOrders'),
+                    "totalOrderValue":localStorage.getItem('dailysummary_totalOrderValue'),
+                    "joins": localStorage.getItem('dailysummary_joins'),
+                    "commission": ,
                     "cancelledOrder": 3
                 }];
-            
+
             var dataSource = new kendo.data.DataSource({
                 data: orders11,
                 change: function () { // subscribe to the CHANGE event of the data source
@@ -93,12 +107,6 @@
             dataSource.read();
         });
     </script>
-    
-    
-    
-    
-    
-    
     <div data-role="footer">
     </div>
     </div>

@@ -33,6 +33,7 @@ app.resetPasswordView = kendo.observable({
             sellerOldPassword: '',
         },
         submit: function () {
+            var emailId=localStorage.getItem('email');
             if ($("#sellerNewPassword").val() == $("#sellerConfirmPassword").val()) {
 
                 $.ajax({
@@ -40,7 +41,7 @@ app.resetPasswordView = kendo.observable({
                     type: "POST",
                     contentType: "application/json",
                     data: JSON.stringify({
-                        "email": "ishu.khatri@gmail.com",
+                        "email":emailId ,
                         "oldPassword": $("#sellerOldPassword").val(),
                         "newPassword": $("#sellerNewPassword").val()
                     }),

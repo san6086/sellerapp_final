@@ -6,14 +6,11 @@
             <input id="orders-switch" type="checkbox" data-role="switch" data-change="Onchange" data-enable="true" data-align="right" data-off-label="off" data-on-label="on" data-checked="true" />
         </div>
     </div>
-    
     <div class="alignment">
         <div id="error-message" class="error-message">Turn on the switch to accept orders</div>
-    <div id="error-message-2" class="error-message-2">Orders switch is turned on!</div>
+        <div id="error-message-2" class="error-message-2">Orders switch is turned on!</div>
     </div>
-    
-   
-<!--    <div id="orderdetailsView" class="form-view">
+    <!--    <div id="orderdetailsView" class="form-view">
       
      <table id="test" style="width:100%" cellpadding="5">
             <tr>
@@ -52,154 +49,159 @@
     <a class="nav-button" data-align="right" data-role="button" href="components/orderDetailsView/view.html">orderdetails</a> -->
     <div data-role="footer">
     </div>
-    
-    <script>
-function Onchange() {
-        var switchInstance2 = $("#orders-switch").data("kendoMobileSwitch");
-    if (switchInstance2.check()) {
-        $('#error-message-2').show();
-        $('#error-message-2').fadeOut(5000);
-    } else {
-        $('#error-message').show();
-        $('#error-message').fadeOut(5000);
- }
- };
-</script>
     <div id="orderdetailsView" class="form-view">
-         <table id="movies" style="width:100%" cellpadding="5">
-             
-         </table>
-     </div>
-     <script id="template" type="text/x-kendo-template">
-          <div id="orderdetailsView" class="form-view">
-          <tr>
-                 <td rowspan="2"><img class="user-avatar" data-align="left" src=#= senderImage# />
-                 </td>
-                 <td colspan="6">
-                     <br>#= senderName # will buy for #=receiverName#</td>
-             </tr>
-             <tr>
-                 <td>
-                     <br><img class="call-user" data-align="left" src="icons/items.png" />
-                 </td>
-                 <td class="apply-border">
-                     <br>#= totalItems # items
-                 </td>
-                 <td class="apply-border">
-                     <br><img class="call-user" data-align="centre" src="icons/cash.png" />
-                 </td>
-                 <td class="apply-border">
-                     <br>$#= orderTotal #
-                 </td>
-                 <td class="apply-border">
-                     <br><img class="call-user" data-align="right" src="icons/seller-time.png" />
-                 </td>
-                 <td class="apply-border">
-                     <br>12.00 PM</td>
-             </tr>
-             <tr>
-                 <td align="center">#=status #</td>
-                 <td color="ffffff" colspan="6" class="apply-border">
-                     <br>03 Feb '16 | Order ID : #= orderId #</td>
-             </tr>
-               </div>
-     </script>
-     <script>
-         $(document).ready(function () {
-             // create a template using the above definition
-             var template = kendo.template($("#template").html());
- 
-             var movies = [
-                 { 
-                     "status": "accepted",
-"orderId": "1052404726",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "Amit alternate",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile//265744592.jpeg",
-"receiverName": "sanjeev badoni1"}
-,{
-      "status": "accepted",
-"orderId": "1081174270",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "Amit alternate",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile//265744592.jpeg",
-"receiverName": "sanjeev badoni1"
+        <table id="orders" style="width:100%" cellpadding="5" data-bind="click: navigatetoOrderdetails">
+        </table>
+    </div>
+    <script id="template" type="text/x-kendo-template">
+    
+      <div id="orderdetailsView" class="form-view">
+           <tr>
+                <td rowspan="2"><img class="user-avatar" data-align="left" src=#=senderImage# />
+                </td>
+                <td colspan="6">
+                    <br>#= senderName # will buy for #=receiverName#</td>
+            </tr>
+            <tr>
+                <td>
+                    <br><img class="call-user" data-align="left" src="icons/items.png" />
+                </td>
+                <td class="apply-border">
+                    <br>#= totalItems # items
+                </td>
+                <td class="apply-border">
+                    <br><img class="call-user" data-align="centre" src="icons/cash.png" />
+                </td>
+                <td class="apply-border">
+                    <br>$#= orderTotal #
+                </td>
+                <td class="apply-border">
+                    <br><img class="call-user" data-align="right" src="icons/seller-time.png" />
+                </td>
+                <td class="apply-border">
+                    <br>12.00 PM</td>
+            </tr>
+            <tr>
+                <td align="center" class="apply-border">#=status #</td>
+                <td color="ffffff" colspan="6" class="apply-border">
+                    <br>03 Feb '16 | Order ID : #= orderId #</td>
+            </tr>
+        </div>
+    </script>
+    <script>
+        $(document).ready(function () {
+            // create a template using the above definition
+            var template = kendo.template($("#template").html());
+            var orders1 = [
+                {
+                    "status": "accepted",
+                    "orderId": "1052404726",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "Amit alternate",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile//265744592.jpeg",
+                    "receiverName": "sanjeev badoni1"
+                }
+, {
+                    "status": "accepted",
+                    "orderId": "1081174270",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "Amit alternate",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile//265744592.jpeg",
+                    "receiverName": "sanjeev badoni1"
 },
-{
-      "status": "accepted",
-"orderId": "1582547830",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "Vikram",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/32599a36-112a-4169-ae48-547ced8eae0b/1298074538.jpeg",
-"receiverName": "sanjeev badoni1"
+                {
+                    "status": "accepted",
+                    "orderId": "1582547830",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "Vikram",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/32599a36-112a-4169-ae48-547ced8eae0b/1298074538.jpeg",
+                    "receiverName": "sanjeev badoni1"
 },
-{
-      "status": "accepted",
-"orderId": "974240979",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "kishan",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/468fcdd3-7294-4855-9589-1cda32e7d1be/1109511521.png",
-"receiverName": "mamaka"
+                {
+                    "status": "accepted",
+                    "orderId": "974240979",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "kishan",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/468fcdd3-7294-4855-9589-1cda32e7d1be/1109511521.png",
+                    "receiverName": "mamaka"
 },
-{
-      "status": "accepted",
-"orderId": "1627782929",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "kishan",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/468fcdd3-7294-4855-9589-1cda32e7d1be/1109511521.png",
-"receiverName": "mamaka"
+                {
+                    "status": "accepted",
+                    "orderId": "1627782929",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "kishan",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/468fcdd3-7294-4855-9589-1cda32e7d1be/1109511521.png",
+                    "receiverName": "mamaka"
 },
-{
-      "status": "accepted",
-"orderId": "757502724",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "mamaka",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/793b84fb-169c-49b1-9831-95a190d1c92d/1478233246.png",
-"receiverName": "kishan"
+                {
+                    "status": "accepted",
+                    "orderId": "757502724",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "mamaka",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/793b84fb-169c-49b1-9831-95a190d1c92d/1478233246.png",
+                    "receiverName": "kishan"
 },
-{
-      "status": "accepted",
-"orderId": "1204496548",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "Vikram",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/32599a36-112a-4169-ae48-547ced8eae0b/1298074538.jpeg",
-"receiverName": "sanjeev badoni1"
+                {
+                    "status": "accepted",
+                    "orderId": "1204496548",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "Vikram",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/32599a36-112a-4169-ae48-547ced8eae0b/1298074538.jpeg",
+                    "receiverName": "sanjeev badoni1"
 },
-{
-      "status": "accepted",
-"orderId": "1398086744",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "kishan",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/468fcdd3-7294-4855-9589-1cda32e7d1be/1109511521.png",
-"receiverName": "mamaka"
+                {
+                    "status": "accepted",
+                    "orderId": "1398086744",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "kishan",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/468fcdd3-7294-4855-9589-1cda32e7d1be/1109511521.png",
+                    "receiverName": "mamaka"
 },
-{
-      "status": "accepted",
-"orderId": "1114656321",
-"totalItems": "0",
-"orderTotal": "0",
-"senderName": "mamaka",
-"senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/793b84fb-169c-49b1-9831-95a190d1c92d/1478233246.png",
-"receiverName": "kishan"
+                {
+                    "status": "accepted",
+                    "orderId": "1114656321",
+                    "totalItems": "0",
+                    "orderTotal": "0",
+                    "senderName": "mamaka",
+                    "senderImage": "https://s3-ap-southeast-1.amazonaws.com/fv-customer-profile/793b84fb-169c-49b1-9831-95a190d1c92d/1478233246.png",
+                    "receiverName": "kishan"
 }];
- 
-             var dataSource = new kendo.data.DataSource({
-                 data: movies,
-                 change: function () { // subscribe to the CHANGE event of the data source
-                     $("#movies").html(kendo.render(template, this.view())); // populate the table
-                 }
-             });
- 
-             // read data from the "movies" array
-             dataSource.read();
-         });
-     </script>
+            var orders = orders1;
+            var dataSource = new kendo.data.DataSource({
+                data: orders,
+                change: function () { // subscribe to the CHANGE event of the data source
+                    $("#orders").html(kendo.render(template, this.view())); // populate the table
+                }
+            });
+
+            // read data from the "movies" array
+            dataSource.read(); 
+        });
+    </script>
+    <script>
+        $("#orders-switch").change(function () {
+            var sellerId3 = localStorage.getItem('sellerId');
+            $.ajax({
+                url: "http://sit.foodvite.co:8080/FVS/v1/sellerStatus",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "sellerId": sellerId3,
+                    "order": true
+                }),
+                dataType: "json",
+                success: function (data) {
+                    var ob = JSON.parse(JSON.stringify(data));
+                }
+            });
+        });
+    </script>
 </div>
